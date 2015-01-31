@@ -36,6 +36,12 @@ Each littlebox icon is made up of three elements (<lildivs>) that are completely
 Littlebox icons work well in all major browsers, with slight variation in appearance across browsers. They have not, however, been well tested in IE. There is also some variation in littlebox icon animation across browsers.
 
 # Contributing
-Suggestions, feedback and contributions to the icon library or compatibility would be greatly appreciated. 
+Suggestions, feedback and contributions to the icon library or compatibility would be greatly appreciated.
+
+# ToDo
+* Compatibility testing
+* Add to icon library
+* Improve animation compatibility
+* Make usable as button groups and input addons
 
 
