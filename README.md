@@ -30,7 +30,7 @@ Super simple to implement, CSS-only icons
 ```
 [See the full icon library.](http://littlebox.cabmaddux.com "littlebox")
 
-Each littlebox icon is made up of three elements (<lildivs>) that are completely styled in css. Some littlebox icons are animated, others are not. Icons can be changed onEvent simply by switching and swapping classes with JavaScript.
+Each littlebox icon is made up of three elements (&lt;lildivs&gt;) that are completely styled in css. Some littlebox icons are animated, others are not. Icons can be changed onEvent simply by switching and swapping classes with JavaScript.
 
 # Compatibility
 Littlebox icons work well in all major browsers, with slight variation in appearance across browsers. They have not, however, been well tested in IE. There is also some variation in littlebox icon animation across browsers.
