@@ -1,6 +1,8 @@
 # littlebox
 Super simple to implement, CSS-only icons
 
+![littlebox](http://littlebox.cabmaddux.com/lib/littleboxGIF.gif "littlebox in action")
+
 [Check out all of the littleboxes!](http://littlebox.cabmaddux.com "littlebox")
 
 # Using littlebox
