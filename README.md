@@ -1,9 +1,7 @@
 # littlebox
 Super simple to implement, CSS-only icons
 
-![littlebox](http://littlebox.cabmaddux.com/lib/littleboxGIF.gif "littlebox in action")
-
-[Check out all of the littleboxes!](http://littlebox.cabmaddux.com "littlebox")
+[View the full library of littlebox icons.](http://littlebox.cabmaddux.com "littlebox")
 
 # Using littlebox
 
@@ -13,29 +11,15 @@ Super simple to implement, CSS-only icons
 <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
 ```
 
-#####Step 2: Add a littlebox to your code. The same structure is used for any littlebox:
+#####Step 2: Add a littlebox icon to your project. The same structure is used for any littlebox:
 ```
-<lilbox>
-   <lildiv></lildiv>
-   <lildiv></lildiv>
-   <lildiv></lildiv>
-</lilbox>
+<div class="lb-icon lb-*"></div>
 ```
 
-#####Step 3: Add a littlebox class to set an icon in your littlebox:
-```
-<lilbox class="soundbar-box">
-   <lildiv></lildiv>
-   <lildiv></lildiv>
-   <lildiv></lildiv>
-</lilbox>
-```
-[See the full icon library.](http://littlebox.cabmaddux.com "littlebox")
-
-Each littlebox icon is made up of three elements (&lt;lildivs&gt;) that are completely styled in css. Some littlebox icons are animated, others are not. Icons can be changed onEvent simply by switching and swapping classes with JavaScript.
+Each littlebox icon is made up of three or fewer elements, but can be called with as a single element with class .lb-icon followed by the .lb-* class associated with the requested icon.
 
 # Compatibility
-Littlebox icons work well in all major browsers, with slight variation in appearance across browsers. They have not, however, been well tested in IE. There is also some variation in littlebox icon animation across browsers.
+Compatibility is still being reveiwed. 
 
 # Contributing
 Suggestions, feedback and contributions to the icon library or compatibility would be greatly appreciated.
