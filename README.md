@@ -1,5 +1,5 @@
 # littlebox
-Super simple to implement, CSS-only icons
+Super simple to use, CSS-only icons
 
 [View the full library of littlebox icons.](http://littlebox.cabmaddux.com "littlebox")
 
