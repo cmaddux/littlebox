@@ -21,29 +21,29 @@
         .blue-text {
             color: #193441;
         }     
-	.no-margin {
-		margin-top:0px;
-		margin-bottom:0px;
-	}
-	.code {	
-		padding:20px;
-		background-color:#193441;
-		color:white;
-		border-radius:10px;
-	}
-        code {	
-		background-color:transparent;
-		color:white;
-	}
-	.padded-left {
-		padding-left: 10%;	
-	}
-	.break {
-		padding-top:20px;
-	}
-	.align-middle {
-		vertical-align:middle;
-	}
+		.no-margin {
+			margin-top:0px;
+			margin-bottom:0px;
+		}
+		.code {	
+			padding:20px;
+			background-color:#193441;
+			color:white;
+			border-radius:10px;
+		}
+			code {	
+			background-color:transparent;
+			color:white;
+		}
+		.padded-left {
+			padding-left: 10%;	
+		}
+		.break {
+			padding-top:20px;
+		}
+		.align-middle {
+			vertical-align:middle;
+		}
         .btn-fixed {
             position:fixed;
             bottom: 10px;
@@ -58,6 +58,32 @@
             background-color: #3E606F;
             color:white;
         }
+		.showcase-row {
+			height:65px;	
+		}
+		.showcase-one .lb-soundbar::after, .showcase-one .lb-soundbar::before  {
+			display:none;
+		}
+		.showcase-two .lb-soundbar::after  {
+			display:none;
+		}
+		a {
+			display:inline-block;
+		}
+		.link-btn {
+			height:40px; 
+			width:40px; 
+			background-color:#D1DBBD; 
+			padding:10px; 
+			margin:auto;
+		}
+		.link-btn:hover {
+			height:40px; 
+			width:40px; 
+			background-color: #B3C492; 
+			padding:10px; 
+			margin:auto;
+		}
 	</style>
 </head>
 
@@ -72,24 +98,24 @@
     <main>
         <div class="container">
         	<div class="row text-center">
-            	<h4>This is a <span class="blue-text">littlebox</span><br>&darr;</h4>
-                <lilbox class="no-margin"></lilbox>
-                <h4>&uarr;<br>It happens to be blue</h4>
+            	<h4>This is a <span class="blue-text">littlebox</span> icon</h4>
+                <div class="lb-icon lb-soundbar"></div>
+                <h4>It's made entirely with CSS.</h4>
             </div>
             <hr width="25%">
             <div class="row text-center">
-            	<h4>Here's a <span class="blue-text">littlebox</span> with a little soundbar icon<br>&darr;</h4>
-                <lilbox class="no-margin soundbar-box"><lildiv></lildiv><lildiv></lildiv><lildiv></lildiv></lilbox>
+            	<h4>Here's how <span class="blue-text">littlebox</span> icons work</h4>
+                <div class="showcase-one"><div class="lb-icon lb-soundbar"></div><br><small>A first element of the icon is set by styling .lb-soundbar in CSS.<br><br></small></div><div class="showcase-two"><div class="lb-icon lb-soundbar"></div><br><small>A second element of the icon is set by styling .lb-soundbar::before in CSS.<br><br></small></div><div><div class="lb-icon lb-soundbar"></div><br><small>The final element of the icon is set by styling .lb-soundbar::after in CSS.<br><br></small></div>
+            <h5 class="col-md-6 col-md-offset-3">Each littlebox icon is made up of three or fewer elements, but can be called with as a single element with class .lb-icon followed by the .lb-* class associated with the requested icon.</h5>
             </div>
-            <div class="row break">
-            </div>
+            <hr width="25%">
             <div class="row text-center">
                 <h4>It's easy to include a littlebox in your project:</h4>
             </div>
             <div class="row break">
             </div>
             <div class="row text-center">
-                <h5>Step 1: Download the littlebox CSS files and initialize the plugin in your project (as well as Bootstrap, if not already initialized):</h5>
+                <h5>Step 1: Download the littlebox CSS files and initialize the plugin in your project (as well as Bootstrap, if not already initialized):<br><br></h5>
                 <a class="btn btn-default btn-lg" href="https://github.com/cmaddux/littlebox/archive/master.zip" download>Download files</a>
                 <h4>+</h4>
                 <div class="code col-md-8 col-md-offset-2 text-center">
@@ -102,616 +128,363 @@
             <div class="row break">
             </div>
             <div class="row text-center">
-            	<h5>Step 2: Add a littlebox to your code. The same structure is used for any littlebox:</h5>
-                <div class="code col-md-8 col-md-offset-2 padded-left text-left">
+            	<h5>Step 2: Add a littlebox icon to your project. The same structure is used for any littlebox icon:<br><br></h5>
+                <div class="code col-md-8 col-md-offset-2 text-center">
                   <code>
-                      &lt;lilbox&gt;<br>
-                      &nbsp&nbsp&nbsp&lt;lildiv&gt;&lt;/lildiv&gt;<br>
-                      &nbsp&nbsp&nbsp&lt;lildiv&gt;&lt;/lildiv&gt;<br>
-                      &nbsp&nbsp&nbsp&lt;lildiv&gt;&lt;/lildiv&gt;<br>
-                      &lt;/lilbox&gt;
+                      &lt;div class="lb-icon lb-*"&gt;&lt;/div&gt;
                   </code>
                 </div>
             </div>
             <div class="row break">
-            </div>
-            <div class="row text-center">
-            	<h5>Step 3: Add a littlebox class to set an icon in your littlebox:</h5>
-                <div class="code col-md-8 col-md-offset-2 padded-left text-left">
-                  <code>
-                      &lt;lilbox class="soundbar-box"&gt;<br>
-                      &nbsp&nbsp&nbsp&lt;lildiv&gt;&lt;/lildiv&gt;<br>
-                      &nbsp&nbsp&nbsp&lt;lildiv&gt;&lt;/lildiv&gt;<br>
-                      &nbsp&nbsp&nbsp&lt;lildiv&gt;&lt;/lildiv&gt;<br>
-                      &lt;/lilbox&gt;
-                  </code>
-                </div>
-            </div>
-            <div class="row break">
-            </div>
-            <div class="row text-center">
-            	<h4 class="col-md-8 col-md-offset-2">Each littlebox icon is made up of three elements (&lt;lildivs&gt;) that are completely styled in css. Some littlebox icons are animated, others are not. Icons can be changed onEvent simply by switching and swapping classes with JavaScript.</h4>
             </div>
             <hr width="50%">
+            <div class="row break">
+            </div>
             <div class="row text-center">
             	<h4 class="col-md-8 col-md-offset-2">Littlebox icons and their associated classes:</h4>
             </div>
             <div class="row break">
             </div>
-            <div class="row">
-            	<div class="col-md-4 text-left">
+            <div class="row showcase-row">
+            	<div class="col-md-3 col-md-offset-2 text-left">
                 	<div class="row">
                         <p>
-                            <lilbox class="play-box">
-                                <lildiv></lildiv>
-                                <lildiv></lildiv>
-                                <lildiv></lildiv>
-                            </lilbox>
-                            <code class="blue-text align-middle">class="play-box"</code>
+                            <div class="lb-icon lb-play"></div>
+                            <code class="blue-text align-middle"><small>.lb-play</small></code>
                         </p>
                     </div>
 					<div class="row">
-                        <p>
-                            <lilbox class="soundbar-box">
-                                <lildiv></lildiv>
-                                <lildiv></lildiv>
-                                <lildiv></lildiv>
-                            </lilbox>
-                            <code class="blue-text align-middle">class="soundbar-box"</code>
+                    	<p>
+                            <div class="lb-icon lb-soundbar"></div>
+                            <code class="blue-text align-middle"><small>class="lb-soundbar"</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="pause-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="pause-box"</code>
+                        <div class="lb-icon lb-pause"></div>
+                        <code class="blue-text align-middle"><small>.lb-pause</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="fforward-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="fforward-box"</code>
+                        <div class="lb-icon lb-fforward"></div>
+                        <code class="blue-text align-middle"><small>.lb-fforward</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="frewind-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="frewind-box"</code>
+                        <div class="lb-icon lb-frewind"></div>
+                        <code class="blue-text align-middle"><small>.lb-frewind</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="next-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="next-box"</code>
+                        <div class="lb-icon lb-next"></div>
+                        <code class="blue-text align-middle"><small>.lb-next</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="prev-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="prev-box"</code>
+                        <div class="lb-icon lb-prev"></div>
+                        <code class="blue-text align-middle"><small>.lb-prev</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="ipod-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="ipod-box"</code>
+                        <div class="lb-icon lb-ipod"></div>
+                        <code class="blue-text align-middle"><small>.lb-ipod</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="speaker-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="speaker-box"</code>
+                        <div class="lb-icon lb-speaker"></div>
+                        <code class="blue-text align-middle"><small>.lb-speaker</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="beats-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="beats-box"</code>
+                        <div class="lb-icon lb-beats"></div>
+                        <code class="blue-text align-middle"><small>.lb-beats</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="sidespeaker-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="sidespeaker-box"</code>
+                        <div class="lb-icon lb-sidespeaker"></div>
+                        <code class="blue-text align-middle"><small>.lb-sidespeaker</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="talking-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="talking-box"</code>
+                        <div class="lb-icon lb-talk"></div>
+                        <code class="blue-text align-middle"><small>.lb-talk</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="earbud-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="earbud-box"</code>
+                        <div class="lb-icon lb-earbud"></div>
+                        <code class="blue-text align-middle"><small>.lb-earbud</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="vinyl-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="vinyl-box"</code>
+                        <div class="lb-icon lb-vinyl"></div>
+                        <code class="blue-text align-middle"><small>.lb-vinyl</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="search-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="search-box"</code>
+                        <div class="lb-icon lb-search"></div>
+                        <code class="blue-text align-middle"><small>.lb-search</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="lock-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="lock-box"</code>
+                        <div class="lb-icon lb-lock"></div>
+                        <code class="blue-text align-middle"><small>.lb-lock</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="edit-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="edit-box"</code>
+                        <div class="lb-icon lb-edit"></div>
+                        <code class="blue-text align-middle"><small>.lb-edit</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="phone-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="phone-box"</code>
+                        <div class="lb-icon lb-phone"></div>
+                        <code class="blue-text align-middle"><small>.lb-phone</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="eject-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="eject-box"</code>
+                        <div class="lb-icon lb-eject"></div>
+                        <code class="blue-text align-middle"><small>.lb-eject</small></code>
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 text-left">
+                <div class="col-md-3 text-left">
                     <div class="row">
                         <p>
-                        <lilbox class="burger-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="burger-box"</code>
+                        <div class="lb-icon lb-burger"></div>
+                        <code class="blue-text align-middle"><small>.lb-burger</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="larrow-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="larrow-box"</code>
+                        <div class="lb-icon lb-larrow"></div>
+                        <code class="blue-text align-middle"><small>.lb-larrow</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="rarrow-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="rarrow-box"</code>
+                        <div class="lb-icon lb-rarrow"></div>
+                        <code class="blue-text align-middle"><small>.lb-rarrow</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="lcarrot-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="lcarrot-box"</code>
+                        <div class="lb-icon lb-lcarrot"></div>
+                        <code class="blue-text align-middle"><small>.lb-lcarrot</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="rcarrot-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="rcarrot-box"</code>
+                        <div class="lb-icon lb-rcarrot"></div>
+                        <code class="blue-text align-middle"><small>.lb-rcarrot</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="upcarrot-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="upcarrot-box"</code>
+                        <div class="lb-icon lb-upcarrot"></div>
+                        <code class="blue-text align-middle"><small>.lb-upcarrot</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="downcarrot-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="downcarrot-box"</code>
+                        <div class="lb-icon lb-downcarrot"></div>
+                        <code class="blue-text align-middle"><small>.lb-downcarrot</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="larrow-o-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="larrow-o-box"</code>
+                        <div class="lb-icon lb-larrow-o"></div>
+                        <code class="blue-text align-middle"><small>.lb-larrow-o</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="rarrow-o-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="rarrow-o-box"</code>
+                        <div class="lb-icon lb-rarrow-o"></div>
+                        <code class="blue-text align-middle"><small>.lb-rarrow-o</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="comment-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="comment-box"</code>
+                        <div class="lb-icon lb-comment"></div>
+                        <code class="blue-text align-middle"><small>.lb-comment</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="flag-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="flag-box"</code>
+                        <div class="lb-icon lb-flag"></div>
+                        <code class="blue-text align-middle"><small>.lb-flag</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="download-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="download-box"</code>
+                        <div class="lb-icon lb-download"></div>
+                        <code class="blue-text align-middle"><small>.lb-download</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="home-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="home-box"</code>
+                        <div class="lb-icon lb-home"></div>
+                        <code class="blue-text align-middle"><small>.lb-home</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="camera-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="camera-box"</code>
+                        <div class="lb-icon lb-camera"></div>
+                        <code class="blue-text align-middle"><small>.lb-camera</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="video-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="video-box"</code>
+                        <div class="lb-icon lb-video"></div>
+                        <code class="blue-text align-middle"><small>.lb-video</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="email-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="email-box"</code>
+                        <div class="lb-icon lb-email"></div>
+                        <code class="blue-text align-middle"><small>.lb-email</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="user-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="user-box"</code>
+                        <div class="lb-icon lb-user"></div>
+                        <code class="blue-text align-middle"><small>.lb-user</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="clock-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="clock-box"</code>
+                        <div class="lb-icon lb-clock"></div>
+                        <code class="blue-text align-middle"><small>.lb-clock</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="eye-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="eye-box"</code>
+                        <div class="lb-icon lb-eye"></div>
+                        <code class="blue-text align-middle"><small>.lb-eye</small></code>
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 text-left">
+                <div class="col-md-3 text-left">
                     <div class="row">
                         <p>
-                        <lilbox class="check-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="check-box"</code>
+                        <div class="lb-icon lb-check"></div>
+                        <code class="blue-text align-middle"><small>.lb-check</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="x-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="x-box"</code>
+                        <div class="lb-icon lb-x"></div>
+                        <code class="blue-text align-middle"><small>.lb-x</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="info-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="info-box"</code>
+                        <div class="lb-icon lb-info"></div>
+                        <code class="blue-text align-middle"><small>.lb-info</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="warning-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="warning-box"</code>
+                        <div class="lb-icon lb-warning"></div>
+                        <code class="blue-text align-middle"><small>.lb-warning</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="noentry-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="noentry-box"</code>
+                        <div class="lb-icon lb-noentry"></div>
+                        <code class="blue-text align-middle"><small>class="lb-noentry"</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="plus-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="plus-box"</code>
+                        <div class="lb-icon lb-plus"></div>
+                        <code class="blue-text align-middle"><small>.lb-plus</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="minus-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="minus-box"</code>
+                        <div class="lb-icon lb-minus"></div>
+                        <code class="blue-text align-middle"><small>.lb-minus</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="times-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="times-box"</code>
+                        <div class="lb-icon lb-divide"></div>
+                        <code class="blue-text align-middle"><small>.lb-divide</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="divide-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="divide-box"</code>
+                        <div class="lb-icon lb-percent"></div>
+                        <code class="blue-text align-middle"><small>.lb-percent</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="percent-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="percent-box"</code>
+                        <div class="lb-icon lb-heart"></div>
+                        <code class="blue-text align-middle"><small>.lb-heart</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="like-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="like-box"</code>
+                        <div class="lb-icon lb-plus-o"></div>
+                        <code class="blue-text align-middle"><small>.lb-plus-o</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="plus-o-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="plus-o-box"</code>
+                        <div class="lb-icon lb-minus-o"></div>
+                        <code class="blue-text align-middle"><small>.lb-minus-o</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="minus-o-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="minus-o-box"</code>
+                        <div class="lb-icon lb-times-o"></div>
+                        <code class="blue-text align-middle"><small>.lb-times-o</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="times-o-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="times-o-box"</code>
+                        <div class="lb-icon lb-denied"></div>
+                        <code class="blue-text align-middle"><small>.lb-denied</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="denied-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="denied-box"</code>
+                        <div class="lb-icon lb-file"></div>
+                        <code class="blue-text align-middle"><small>.lb-file</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="file-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="file-box"</code>
+                        <div class="lb-icon lb-folder"></div>
+                        <code class="blue-text align-middle"><small>.lb-folder</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="folder-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="folder-box"</code>
+                        <div class="lb-icon lb-tag"></div>
+                        <code class="blue-text align-middle"><small>.lb-tag</small></code>
                         </p>
                     </div>
                     <div class="row">
                         <p>
-                        <lilbox class="tag-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="tag-box"</code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                        <lilbox class="locate-box">
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                            <lildiv></lildiv>
-                        </lilbox>
-                        <code class="blue-text align-middle">class="locate-box"</code>
+                        <div class="lb-icon lb-locate"></div>
+                        <code class="blue-text align-middle"><small>.lb-locate</small></code>
                         </p>
                     </div>
                 </div>
@@ -719,265 +492,27 @@
     	</div>
         <div class="row break">
         </div>
+        <div class="row break">
+        </div>
         <div class="row text-center">
             <h4 class="col-md-8 col-md-offset-2">With more to come...</h4>
         </div>
         <hr width="50%">
         <div class="row text-center">
-            <h4 class="col-md-8 col-md-offset-2">The littleboxes themselves can be styled by adding additional classes:</h4>
-        </div>
-        <div class="row break">
-        </div>
-        <div class="row">
-            <div class="col-md-4 text-left">
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-blue">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-blue"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-red">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-red"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-green">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-green"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-yellow">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-yellow"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-tall">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-tall"</code>
-                    </p>
-                </div>
-            </div>
-            
-            <div class="col-md-4 text-left">
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box <small>(default)</small>"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-purple">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-purple"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-black">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-black"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-gray">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-gray"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-big">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-big"</code>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 text-left">
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-rounded">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-rounded"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-nocursor">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-nocursor"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-wide">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-wide"</code>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>
-                    <lilbox class="soundbar-box lb-doublewide">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                    <code class="blue-text align-middle">class="soundbar-box lb-doublewide"</code>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <hr width="50%">
-        <div class="row text-center">
-            <h4 class="col-md-8 col-md-offset-2">These littleboxes work great as button groups and links:</h4>
-        </div>
-        <div class="row break">
-        </div>
-        <div class="row">
-            <div class="container text-center">
-                <p>
-                <lilbox class="check-box lb-green lb-group-left">
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                </lilbox>
-               <lilbox class="x-box lb-red lb-group-center">
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                </lilbox>
-                <lilbox class="info-box lb-group-right lb-wide">
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                </lilbox>
-                <br>
-                <code class="blue-text">class="check-box lb-green lb-group-left"</code>
-                <br>
-                <code class="blue-text">class="x-box lb-red lb-group-middle"</code>
-                <br>
-                <code class="blue-text">class="info-box lb-group-right lb-wide"</code>
-                <br>
-                <small>(place &lt;lilbox&gt; elements back-to-back or place comments between &lt;lilbox&gt; elements to fight small inter-box space seen here)</small>
-                </p>
-            </div>
-            <div class="container text-center">
-                <p>
-                <lilbox class="play-box lb-gray lb-group-left lb-group-top">
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                </lilbox><!--
-                --><lilbox class="soundbar-box lb-group-right lb-group-top">
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                </lilbox>
-                <br>
-                <lilbox class="earbud-box lb-group-left lb-group-bottom">
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                </lilbox><!--
-                --><lilbox class="pause-box lb-gray lb-group-right lb-group-bottom">
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                    <lildiv></lildiv>
-                </lilbox>
-                <br>
-                <code class="blue-text">class="play-box lb-gray lb-group-left lb-group-top"</code>
-                <br>
-                <code class="blue-text">class="soundbar-box lb-group-left lb-group-top"</code>
-                <br>
-                <code class="blue-text">&lt;br&gt;</code>
-                <br>
-                <code class="blue-text">class="earbud-box lb-group-left lb-group-bottom"</code>
-                <br>
-                <code class="blue-text">class="pause-box lb-gray lb-group-right lb-group-bottom"</code>
-                </p>
-            </div>
-            <div class="container text-center">
-                <p>
-                <a href="http://cabmaddux.com" target="_blank">
-                    <lilbox class="lb-blue rarrow-o-box">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
-                </a>
-                <br>
-                Simply wrap your &lt;lilbox&gt; link in an &lt;a&gt; tag like you would any other link.
-                </p>
-            </div>
-        </div>
-        <hr width="50%">
-        <div class="row text-center">
             <h4 class="col-md-8 col-md-offset-2">
-                If you like these littleboxes, have feedback, have questions or want to see a particular littlebox made, please let me know.<br>&darr;<br>
+                If you like these littlebox icons, have feedback, have questions or want to see a particular littlebox made, please let me know.<br><br>
                 <a href="http://twitter.com/cabmaddux" target="_blank">
-                    <lilbox class="talking-box">
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                        <lildiv></lildiv>
-                    </lilbox>
+                	<div class="link-btn">
+                    	<div class="lb-icon lb-comment"></div>
+                    </div> 
                 </a>
-            </h4>
+              </h4>
         </div>
     </main>
     <div class="row break">
     </div>
     <div class="col-xs-8 text-right">
-        <h3><img src="http://static.cabmaddux.com/cabellpic_2.jpg" alt="Cabell Maddux" class="img-circle" style="height:60px; margin-right: 10px;"><a href="http://cabmaddux.com" target="_blank">Hi, I'm Cabell. I made littlebox.</a></h3>
+        <h3><img src="http://static.cabmaddux.com/cabellpic_2.jpg" alt="Cabell Maddux" class="img-circle" style="height:60px; margin-right: 10px;"><a href="http://cabmaddux.com" target="_blank">Hi, I'm Cabell. I started this project.</a></h3>
     </div>
     <div class="row break">
     </div>
