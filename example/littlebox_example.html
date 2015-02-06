@@ -12,14 +12,32 @@
         <script>try{Typekit.load();}catch(e){}</script>
         <title>littlebox</title>
         <style>
+		#logo::before {
+			position:absolute;
+			content:"";
+			height:10px;
+			width:10px;
+			border-left: 3px solid #3498DB;
+			border-bottom: 3px solid #3498DB;
+			margin-left:-5px;
+			margin-top:18px;
+		}
+		#logo::after {
+			position:absolute;
+			content:"";
+			height:10px;
+			width:10px;
+			border-right: 3px solid #3498DB;
+			border-top: 3px solid #3498DB;
+			margin-left:-5px;
+			margin-top:4px;
+		}
         body, html {
             overflow-x:hidden;
-        }
-        hr {
-            border-color: #193441;
+			padding:15px;
         }
         .blue-text {
-            color: #193441;
+            color: #3498DB;
         }     
 		.no-margin {
 			margin-top:0px;
@@ -27,9 +45,8 @@
 		}
 		.code {	
 			padding:20px;
-			background-color:#193441;
+			background-color:#3498DB;
 			color:white;
-			border-radius:10px;
 		}
 			code {	
 			background-color:transparent;
@@ -50,7 +67,7 @@
             right: 10px;
         }
         .btn-default {
-            background-color: #193441;
+            background-color: #3498DB;
             color: white;
             border:none;
         }
@@ -61,28 +78,26 @@
 		.showcase-row {
 			height:65px;	
 		}
-		.showcase-one .lb-soundbar::after, .showcase-one .lb-soundbar::before  {
+		.showcase-one .lb-camera::after, .showcase-one .lb-camera::before  {
 			display:none;
 		}
-		.showcase-two .lb-soundbar::after  {
+		.showcase-two .lb-camera::after  {
 			display:none;
 		}
 		a {
 			display:inline-block;
 		}
 		.link-btn {
-			height:40px; 
-			width:40px; 
-			background-color:#D1DBBD; 
-			padding:10px; 
+            display:inline-block;
+			height:60px; 
+			width:60px; 
+			background-color:#ECF0F1; 
+			padding:20px; 
 			margin:auto;
+			cursor:pointer;
 		}
 		.link-btn:hover {
-			height:40px; 
-			width:40px; 
-			background-color: #B3C492; 
-			padding:10px; 
-			margin:auto;
+			background-color: #D3D7D7; 
 		}
 	</style>
 </head>
@@ -91,33 +106,32 @@
     
     <div class="container blue-text">
         <div class="col-xs-4">
-            <h3>littlebox</h3>
+            <h3 id="logo">littlebox</h3>
         </div>
     </div>
 
-    <main>
         <div class="container">
         	<div class="row text-center">
             	<h4>This is a <span class="blue-text">littlebox</span> icon</h4>
-                <div class="lb-icon lb-soundbar"></div>
-                <h4>It's made entirely with CSS.</h4>
+                <div class="lb-icon lb-camera"></div>
+                <h4>It's made entirely with CSS</h4>
             </div>
             <hr width="25%">
             <div class="row text-center">
-            	<h4>Here's how <span class="blue-text">littlebox</span> icons work</h4>
-                <div class="showcase-one"><div class="lb-icon lb-soundbar"></div><br><small>A first element of the icon is set by styling .lb-soundbar in CSS.<br><br></small></div><div class="showcase-two"><div class="lb-icon lb-soundbar"></div><br><small>A second element of the icon is set by styling .lb-soundbar::before in CSS.<br><br></small></div><div><div class="lb-icon lb-soundbar"></div><br><small>The final element of the icon is set by styling .lb-soundbar::after in CSS.<br><br></small></div>
+            	<h4>Here's how littlebox icons work</h4>
+                <div class="showcase-one"><div class="lb-icon lb-camera"></div><br><small>A first element of the icon is set by styling .lb-camera in CSS.<br><br></small></div><div class="showcase-two"><div class="lb-icon lb-camera"></div><br><small>A second element of the icon is set by styling .lb-camera::before in CSS.<br><br></small></div><div><div class="lb-icon lb-camera"></div><br><small>The final element of the icon is set by styling .lb-camera::after in CSS.<br><br></small></div>
             <h5 class="col-md-6 col-md-offset-3">Each littlebox icon is made up of three or fewer elements, but can be called with as a single element with class .lb-icon followed by the .lb-* class associated with the requested icon.</h5>
             </div>
             <hr width="25%">
             <div class="row text-center">
-                <h4>It's easy to include a littlebox in your project:</h4>
+                <h4>It's easy to include a littlebox icon in your project:</h4>
             </div>
             <div class="row break">
             </div>
             <div class="row text-center">
                 <h5>Step 1: Download the littlebox CSS files and initialize the plugin in your project (as well as Bootstrap, if not already initialized):<br><br></h5>
-                <a class="btn btn-default btn-lg" href="https://github.com/cmaddux/littlebox/archive/master.zip" download>Download files</a>
-                <h4>+</h4>
+                <a class="btn btn-default btn-lg hidden-xs hidden-sm" href="https://github.com/cmaddux/littlebox/archive/master.zip" download>Download files</a>
+                <h4 class="hidden-xs hidden-sm">+</h4>
                 <div class="code col-md-8 col-md-offset-2 text-center">
                   <code>
                       &lt;link rel="stylesheet" type="text/css" href="lib/littlebox.min.css" /&gt;<br>
@@ -138,379 +152,149 @@
             <div class="row break">
             </div>
             <hr width="50%">
-            <div class="row break">
-            </div>
             <div class="row text-center">
-            	<h4 class="col-md-8 col-md-offset-2">Littlebox icons and their associated classes:</h4>
+            	<h4 class="col-md-8 col-md-offset-2">The littlebox icon set:</h4>
+            </div>
+            <div class="row text-center hidden-xs hidden-sm">
+            	<h5>&lt;div class="lb-icon <span id="icon-class">lb-*</span>"&gt;&lt;/div&gt;<br><small>(mouse over an icon to see it's class)</small></h5>
             </div>
             <div class="row break">
             </div>
-            <div class="row showcase-row">
-            	<div class="col-md-3 col-md-offset-2 text-left">
-                	<div class="row">
-                        <p>
-                            <div class="lb-icon lb-play"></div>
-                            <code class="blue-text align-middle"><small>.lb-play</small></code>
-                        </p>
-                    </div>
-					<div class="row">
-                    	<p>
-                            <div class="lb-icon lb-soundbar"></div>
-                            <code class="blue-text align-middle"><small>class="lb-soundbar"</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+        	<div class="row text-center">
+                	<div class="link-btn" onMouseOver="setClassBox('lb-play')" onMouseOut="setClassBox('lb-*')">
+                    	<div class="lb-icon lb-play"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-soundbar')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-soundbar"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-pause')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-pause"></div>
-                        <code class="blue-text align-middle"><small>.lb-pause</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-fforward')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-fforward"></div>
-                        <code class="blue-text align-middle"><small>.lb-fforward</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-frewind')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-frewind"></div>
-                        <code class="blue-text align-middle"><small>.lb-frewind</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-next')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-next"></div>
-                        <code class="blue-text align-middle"><small>.lb-next</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-prev')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-prev"></div>
-                        <code class="blue-text align-middle"><small>.lb-prev</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-ipod')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-ipod"></div>
-                        <code class="blue-text align-middle"><small>.lb-ipod</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                        <div class="lb-icon lb-speaker"></div>
-                        <code class="blue-text align-middle"><small>.lb-speaker</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><br>
+                    <div class="link-btn" onMouseOver="setClassBox('lb-speaker')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-speaker" ></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-beats')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-beats"></div>
-                        <code class="blue-text align-middle"><small>.lb-beats</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-sidespeaker')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-sidespeaker"></div>
-                        <code class="blue-text align-middle"><small>.lb-sidespeaker</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-talk')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-talk"></div>
-                        <code class="blue-text align-middle"><small>.lb-talk</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-earbud')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-earbud"></div>
-                        <code class="blue-text align-middle"><small>.lb-earbud</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-vinyl')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-vinyl"></div>
-                        <code class="blue-text align-middle"><small>.lb-vinyl</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-search')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-search"></div>
-                        <code class="blue-text align-middle"><small>.lb-search</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-lock')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-lock"></div>
-                        <code class="blue-text align-middle"><small>.lb-lock</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><br>
+                    <div class="link-btn" onMouseOver="setClassBox('lb-edit')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-edit"></div>
-                        <code class="blue-text align-middle"><small>.lb-edit</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                        <div class="lb-icon lb-phone"></div>
-                        <code class="blue-text align-middle"><small>.lb-phone</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-phone')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-phone" ></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-eject')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-eject"></div>
-                        <code class="blue-text align-middle"><small>.lb-eject</small></code>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 text-left">
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-burger')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-burger"></div>
-                        <code class="blue-text align-middle"><small>.lb-burger</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-larrow')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-larrow"></div>
-                        <code class="blue-text align-middle"><small>.lb-larrow</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-rarrow')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-rarrow"></div>
-                        <code class="blue-text align-middle"><small>.lb-rarrow</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-lcarrot')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-lcarrot"></div>
-                        <code class="blue-text align-middle"><small>.lb-lcarrot</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-rcarrot')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-rcarrot"></div>
-                        <code class="blue-text align-middle"><small>.lb-rcarrot</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><br>
+                    <div class="link-btn" onMouseOver="setClassBox('lb-upcarrot')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-upcarrot"></div>
-                        <code class="blue-text align-middle"><small>.lb-upcarrot</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-downcarrot')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-downcarrot"></div>
-                        <code class="blue-text align-middle"><small>.lb-downcarrot</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-larrow-o')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-larrow-o"></div>
-                        <code class="blue-text align-middle"><small>.lb-larrow-o</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-rarrow-o')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-rarrow-o"></div>
-                        <code class="blue-text align-middle"><small>.lb-rarrow-o</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-comment')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-comment"></div>
-                        <code class="blue-text align-middle"><small>.lb-comment</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-flag')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-flag"></div>
-                        <code class="blue-text align-middle"><small>.lb-flag</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                        <div class="lb-icon lb-download"></div>
-                        <code class="blue-text align-middle"><small>.lb-download</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                        <div class="lb-icon lb-home"></div>
-                        <code class="blue-text align-middle"><small>.lb-home</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                        <div class="lb-icon lb-camera"></div>
-                        <code class="blue-text align-middle"><small>.lb-camera</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                        <div class="lb-icon lb-video"></div>
-                        <code class="blue-text align-middle"><small>.lb-video</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                        <div class="lb-icon lb-email"></div>
-                        <code class="blue-text align-middle"><small>.lb-email</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-user')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-user"></div>
-                        <code class="blue-text align-middle"><small>.lb-user</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-clock')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-clock"></div>
-                        <code class="blue-text align-middle"><small>.lb-clock</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><br>
+                    <div class="link-btn" onMouseOver="setClassBox('lb-download')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-download"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-home')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-home"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-camera')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-camera"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-video')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-video"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-email')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-email"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-eye')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-eye"></div>
-                        <code class="blue-text align-middle"><small>.lb-eye</small></code>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 text-left">
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-check')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-check"></div>
-                        <code class="blue-text align-middle"><small>.lb-check</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-x')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-x"></div>
-                        <code class="blue-text align-middle"><small>.lb-x</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><br>
+                    <div class="link-btn" onMouseOver="setClassBox('lb-info')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-info"></div>
-                        <code class="blue-text align-middle"><small>.lb-info</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-warning')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-warning"></div>
-                        <code class="blue-text align-middle"><small>.lb-warning</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-noentry')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-noentry"></div>
-                        <code class="blue-text align-middle"><small>class="lb-noentry"</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-plus')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-plus"></div>
-                        <code class="blue-text align-middle"><small>.lb-plus</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-minus')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-minus"></div>
-                        <code class="blue-text align-middle"><small>.lb-minus</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-divide')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-divide"></div>
-                        <code class="blue-text align-middle"><small>.lb-divide</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-percent')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-percent"></div>
-                        <code class="blue-text align-middle"><small>.lb-percent</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-heart')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-heart"></div>
-                        <code class="blue-text align-middle"><small>.lb-heart</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><br>
+                    <div class="link-btn" onMouseOver="setClassBox('lb-plus-o')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-plus-o"></div>
-                        <code class="blue-text align-middle"><small>.lb-plus-o</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-minus-o')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-minus-o"></div>
-                        <code class="blue-text align-middle"><small>.lb-minus-o</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-times-o')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-times-o"></div>
-                        <code class="blue-text align-middle"><small>.lb-times-o</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-denied')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-denied"></div>
-                        <code class="blue-text align-middle"><small>.lb-denied</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-file')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-file"></div>
-                        <code class="blue-text align-middle"><small>.lb-file</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-folder')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-folder"></div>
-                        <code class="blue-text align-middle"><small>.lb-folder</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-tag')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-tag"></div>
-                        <code class="blue-text align-middle"><small>.lb-tag</small></code>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-locate')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-locate"></div>
-                        <code class="blue-text align-middle"><small>.lb-locate</small></code>
-                        </p>
                     </div>
-                </div>
-            <!--ending row-->
-    	</div>
-        <div class="row break">
+              </h4>
         </div>
-        <div class="row break">
-        </div>
-        <div class="row text-center">
-            <h4 class="col-md-8 col-md-offset-2">With more to come...</h4>
-        </div>
-        <hr width="50%">
+    <div class="row break">
+    </div>
+    <hr width="50%">
         <div class="row text-center">
             <h4 class="col-md-8 col-md-offset-2">
                 If you like these littlebox icons, have feedback, have questions or want to see a particular littlebox made, please let me know.<br><br>
                 <a href="http://twitter.com/cabmaddux" target="_blank">
-                	<div class="link-btn">
-                    	<div class="lb-icon lb-comment"></div>
-                    </div> 
+                <div class="link-btn">
+                        <div class="lb-icon lb-comment"></div>
+                </div>
                 </a>
-              </h4>
-        </div>
-    </main>
-    <div class="row break">
-    </div>
+            </h4>
+         </div>
     <div class="col-xs-8 text-right">
         <h3><img src="http://static.cabmaddux.com/cabellpic_2.jpg" alt="Cabell Maddux" class="img-circle" style="height:60px; margin-right: 10px;"><a href="http://cabmaddux.com" target="_blank">Hi, I'm Cabell. I started this project.</a></h3>
     </div>
@@ -523,5 +307,10 @@
         <iframe src="https://ghbtns.com/github-btn.html?user=cmaddux&repo=littlebox&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
         <p style="display:inline-block; vertical-align:middle;"><small>&copy; Cabell Maddux, 2015</small></p>
     </div>
-    
+
+<script>
+function setClassBox(name) {
+	document.getElementById("icon-class").innerHTML = name;
+};
+</script> 
 </body>
