@@ -1,7 +1,11 @@
 # littlebox
 Super simple to use, CSS-only icons
 
-[View the full library of littlebox icons.](http://littlebox.cabmaddux.com "littlebox")
+![littlebox](http://littlebox.cabmaddux.com/lib/lblogoPNG.png "littlebox logo")
+
+![littlebox explained](http://littlebox.cabmaddux.com/lib/lbexplained.png "littlebox explained")
+
+[A demo of littlebox icons in use.](http://littlebox.cabmaddux.com "littlebox")
 
 # Using littlebox
 
