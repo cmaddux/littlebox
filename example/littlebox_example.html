@@ -99,6 +99,15 @@
 		.link-btn:hover {
 			background-color: #D3D7D7; 
 		}
+		.color-showcase .link-btn {
+			background-color:white;
+		}
+		.color-showcase .link-btn:hover {
+			background-color:#ECF0F1;
+		}
+		.color-showcase .link-btn:nth-of-type(4) {
+			background-color:#3498DB;
+		}
 	</style>
 </head>
 
@@ -284,6 +293,52 @@
         </div>
     <div class="row break">
     </div>
+            <hr width="50%">
+            <div class="row text-center">
+            	<h4 class="col-md-8 col-md-offset-2">Setting colors is simple:</h4>
+            </div>
+            <div class="row text-center">
+            	<h5>All littlebox icons are built as borders, to set your own color, simply set the icons border color in your CSS, like so:<br><br></h5>
+                <div class="code col-md-8 col-md-offset-2 text-left" style="padding-left:20%;">
+                      <code>
+                      .lb-*, .lb-*::before .lb-*::after {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-color: /*YOUR COLOR HERE*/<br>
+                      }
+                      </code>
+                     </div>
+            </div>
+            <div class="row break">
+    		</div>
+            <div class="row text-center">
+            	<h5>OR</h5>
+            </div>
+            <div class="row break">
+    		</div>
+            <div class="row text-center">
+            	<h5>Use a preset color by adding an lb-*color* class to the littlebox icon.</h5>
+            </div>
+            <div class="row text-center hidden-xs hidden-sm">
+            	<h5>&lt;div class="lb-icon <span id="icon-color">lb-*</span>"&gt;&lt;/div&gt;<br><small>(mouse over an icon to see it's class)</small></h5>
+            </div>
+            <div class="row break">
+            </div>
+    <div class="row text-center color-showcase">
+                	<div class="link-btn" onMouseOver="setColorBox('lb-heart lb-red')" onMouseOut="setColorBox('lb-*')">
+                    	<div class="lb-icon lb-heart lb-red"></div>
+                    </div><div class="link-btn" onMouseOver="setColorBox('lb-check lb-green')" onMouseOut="setColorBox('lb-*')">
+                        <div class="lb-icon lb-check lb-green"></div>
+                    </div><div class="link-btn" onMouseOver="setColorBox('lb-warning lb-yellow')" onMouseOut="setColorBox('lb-*')">
+                        <div class="lb-icon lb-warning lb-yellow"></div>
+                    </div><div class="link-btn" onMouseOver="setColorBox('lb-user lb-white')" onMouseOut="setColorBox('lb-*')">
+                        <div class="lb-icon lb-user lb-white" ></div>
+                    </div><div class="link-btn" onMouseOver="setColorBox('lb-eye lb-purple')" onMouseOut="setColorBox('lb-*')">
+                        <div class="lb-icon lb-eye lb-purple"></div>
+                    </div><div class="link-btn" onMouseOver="setColorBox('lb-camera lb-black')" onMouseOut="setColorBox('lb-*')">
+                        <div class="lb-icon lb-camera lb-black"></div>
+                    </div><div class="link-btn" onMouseOver="setColorBox('lb-video lb-gray')" onMouseOut="setColorBox('lb-*')">
+                        <div class="lb-icon lb-video lb-gray"></div>
+                    </div>
+        </div>
     <hr width="50%">
         <div class="row text-center">
             <h4 class="col-md-8 col-md-offset-2">
@@ -312,5 +367,13 @@
 function setClassBox(name) {
 	document.getElementById("icon-class").innerHTML = name;
 };
+function setColorBox(color) {
+	document.getElementById("icon-color").innerHTML = color;
+};
+setInterval(function(){ 
+	document.getElementById("transition-showcase").className =
+   		document.getElementById("transition-showcase").className.replace( /(?:^|\s)lb-user(?!\S)/g , '' );
+	document.getElementById("transition-showcase").className += " lb-x";
+}, 5000);
 </script> 
 </body>
