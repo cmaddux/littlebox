@@ -1,0 +1,10 @@
+{
+    "name": "littlebox",
+    "version": "0.0.1",
+    "description": "Super simple to implement, CSS-only icons.",
+    "main": "lib/littlebox.css",
+    "author": "Cabell Maddux",
+    "ignore": [
+        "example"
+    ]
+}
