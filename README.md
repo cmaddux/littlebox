@@ -9,7 +9,12 @@ Super simple to use, CSS-only icons
 
 # Using littlebox
 
-#####Step 1: Download the littlebox CSS and reference it in your project (along with Bootstrap, if not already initialized):
+#####Step 1: Install littlebox through Bower or download littlebox and reference it in your project (along with Bootstrap, if not already initialized):
+```
+bower install littlebox
+```
+or
+
 ```
 <link rel="stylesheet" type="text/css" href="lib/littlebox.min.css" />
 <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
@@ -21,6 +26,15 @@ Super simple to use, CSS-only icons
 ```
 
 Each littlebox icon is made up of three or fewer elements, but can be called with as a single element with class .lb-icon followed by the .lb-* class associated with the requested icon.
+
+# Customization
+Each littlebox icon is built using borders, so an icon's color (or even individual elements within an icon) can be styled in your CSS:
+
+```
+.lb-*, .lb-*::before, .lb::after {
+  border-color: /*YOUR COLOR HERE*/
+}
+```
 
 # Compatibility
 Compatibility is still being reveiwed. 
