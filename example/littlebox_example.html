@@ -7,7 +7,7 @@
         <script type="text/javascript" src="http://static.cabmaddux.com/jquery-ui-1.10.4.custom/js/jquery_compressed.js"></script>
         <script type="text/javascript"  src="http://static.cabmaddux.com/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/bootstrap.min.css" />
-        <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/littlebox.min.css" />
+        <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/littlebox.0.0.2.min.css" />
         <script src="//use.typekit.net/xnz2wnw.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <title>littlebox</title>
@@ -99,10 +99,16 @@
 		.link-btn:hover {
 			background-color: #D3D7D7; 
 		}
+		.white-bg {
+			background-color:white;
+		}
+		.white-bg:hover {
+			background-color:#ECF0F1;
+		}
 		.color-showcase .link-btn {
 			background-color:white;
 		}
-		.color-showcase .link-btn:hover {
+		.color-showcase .link-btn:hover  {
 			background-color:#ECF0F1;
 		}
 		.color-showcase .link-btn:nth-of-type(4) {
@@ -157,7 +163,17 @@
             <div class="row break">
             </div>
             <div class="row text-center">
-                <h5>Step 1: Download the littlebox CSS files and initialize the plugin in your project (as well as Bootstrap, if not already initialized):<br><br></h5>
+                <h5>Step 1: Install littlebox through Bower or download the littlebox CSS files and initialize the plugin in your project (as well as Bootstrap, if not already initialized):<br><br></h5>
+                <div class="code col-md-8 col-md-offset-2 text-center">
+                  <code>
+                      bower install littlebox
+                  </code>
+                </div>
+             </div>
+             <div class="row text-center" style="margin:20px;">
+                <h4>or</h4>
+             </div>
+             <div class="row text-center">
                 <a class="btn btn-default btn-lg hidden-xs hidden-sm" href="https://github.com/cmaddux/littlebox/archive/master.zip" download>Download files</a>
                 <h4 class="hidden-xs hidden-sm">+</h4>
                 <div class="code col-md-8 col-md-offset-2 text-center">
@@ -216,7 +232,7 @@
                         <div class="lb-icon lb-talk"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-earbud')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-earbud"></div>
-                    </div><div class="link-btn" onMouseOver="setClassBox('lb-commetn')" onMouseOut="setClassBox('lb-*')">
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-comment')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-comment"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-search')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-search"></div>
@@ -324,8 +340,33 @@
                         <div class="lb-icon lb-singleright"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-alert')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-alert"></div>
+                    </div><br>
+                    <div class="link-btn" onMouseOver="setClassBox('lb-iphone')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-iphone"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-macbook')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-macbook"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-tablet')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-tablet"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-desktop')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-desktop"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-adjust')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-adjust"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-archive')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-archive"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-asterisk')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-asterisk"></div>
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-creditcard')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-creditcard"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-visa')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-visa"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-mastercard')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-mastercard"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-amex')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-amex"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-discover')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-discover"></div>
                     </div>
-              </h4>
         </div>
     <div class="row break">
     </div>
