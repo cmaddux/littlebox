@@ -7,7 +7,7 @@
         <script type="text/javascript" src="http://static.cabmaddux.com/jquery-ui-1.10.4.custom/js/jquery_compressed.js"></script>
         <script type="text/javascript"  src="http://static.cabmaddux.com/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/bootstrap.min.css" />
-        <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/littlebox.0.0.2.min.css" />
+        <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/littlebox.0.0.3.min.css" />
         <script src="//use.typekit.net/xnz2wnw.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <title>littlebox</title>
@@ -133,11 +133,62 @@
 			background-color:red;
 			opacity: 0.5;
 		}
+		.progress {
+			display:block;
+			height:7px;
+			width:240px;
+			margin-left:auto;
+			margin-right:auto;
+			margin-bottom:0px;
+			margin-top:0px;
+			border-right:240px solid #1A6394;
+			border-radius:0px;
+		}
+		#class-shown {
+			position:fixed;
+            left: 10px;
+            bottom: 10px;
+		}
+		.selected {
+			background-color: rgba(159,172,206,1.00);
+		}
+		.lasers {
+			position:fixed;
+			width:480px;
+			left:50%;
+			margin-left:-240px;
+			opacity:0.7;
+			z-index:99999;
+		}
+		.laser {
+			display:inline-block;
+			margin-left:29px;
+			margin-right:29px;
+			width:2px;
+			height:20px;
+			background-color:red;
+		}
+		.ccard-calc {
+			border-radius:3px;
+			display:inline-block;
+			width:100px;
+		}
+		.not-selected {
+			background-color:white;
+		}
 	</style>
 </head>
 
 <body id="home">
-    
+    <!--<div class="lasers">
+                	<div class="laser"></div><div class="laser">
+                    </div><div class="laser">
+                    </div><div class="laser">
+                    </div><div class="laser">
+                    </div><div class="laser">
+                    </div><div class="laser">
+                    </div><div class="laser"></div>
+    </div>-->
     <div class="container blue-text">
         <div class="col-xs-4">
             <h3 id="logo">littlebox</h3>
@@ -199,9 +250,7 @@
             <div class="row text-center">
             	<h4 class="col-md-8 col-md-offset-2">The littlebox icon set:</h4>
             </div>
-            <div class="row text-center hidden-xs hidden-sm">
-            	<h5>&lt;div class="lb-icon <span id="icon-class">lb-*</span>"&gt;&lt;/div&gt;<br><small>(mouse over an icon to see it's class)</small></h5>
-            </div>
+            <h5 id="class-shown" class="text-left hidden-xs hidden-sm">&lt;div class="lb-icon <span id="icon-class">lb-*</span>"&gt;&lt;/div&gt;<br><small>(mouse over an icon to see its class)</small></h5>
             <div class="row break">
             </div>
         	<div class="row text-center">
@@ -357,15 +406,242 @@
                         <div class="lb-icon lb-asterisk"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-creditcard')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-creditcard"></div>
+                    </div><br><br>
+                    <h6>Flag icons</h6>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-us')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-us"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-canada')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-canada"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-france')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-france"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-germany')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-germany"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-mexico')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-mexico"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-italy')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-italy"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-sierraleone')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-sierraleone"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-argentina')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-argentina"></div>
                     </div><br>
-                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-visa')" onMouseOut="setClassBox('lb-*')">
-                        <div class="lb-icon lb-visa"></div>
-                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-mastercard')" onMouseOut="setClassBox('lb-*')">
-                        <div class="lb-icon lb-mastercard"></div>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-england')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-england"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-afghanistan')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-afghanistan"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-algeria')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-algeria"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-armenia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-armenia"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-austria')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-austria"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-azerbaijan')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-azerbaijan"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-barbados')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-barbados"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-bangladesh')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-bangladesh"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-bahrain')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-bahrain"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-belgium')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-belgium"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-benin')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-benin"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-belarus')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-belarus"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-belize')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-belize"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-bolivia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-bolivia"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-botswana')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-botswana"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-brazil')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-brazil"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-bulgaria')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-bulgaria"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-burkinafaso')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-burkinafaso"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-cameroon')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-cameroon"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-chad')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-chad"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-chile')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-chile"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-china')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-china"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-colombia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-colombia"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-ivorycoast')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-ivorycoast"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-croatia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-croatia"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-cyprus')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-cyprus"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-denmark')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-denmark"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-ecuador')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-ecuador"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-egypt')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-egypt"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-elsalvador')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-elsalvador"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-estonia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-estonia"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-ethiopia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-ethiopia"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-finland')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-finland"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-gabon')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-gabon"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-gambia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-gambia"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-ghana')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-ghana"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-guatemala')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-guatemala"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-guinea')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-guinea"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-guineabissau')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-guineabissau"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-haiti')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-haiti"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-honduras')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-honduras"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-hongkong')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-hongkong"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-hungary')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-hungary"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-iceland')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-iceland"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-india')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-india"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-indonesia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-indonesia"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-iran')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-iran"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-iraq')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-iraq"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-ireland')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-ireland"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-israel')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-israel"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-italy')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-italy"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-japan')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-japan"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-nkorea')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-nkorea"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-laos')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-laos"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-lebanon')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-lebanon"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-lesotho')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-lesotho"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-libya')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-libya"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-liechtenstein')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-liechtenstein"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-lithuania')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-lithuania"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-luxemborg')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-luxemborg"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-macau')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-macau"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-madagascar')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-madagascar"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-mali')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-mali"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-mexico')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-mexico"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-moldova')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-moldova"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-monaco')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-monaco"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-morocco')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-morocco"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-holland')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-holland"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-nicaragua')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-nicaragua"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-niger')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-niger"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-nigeria')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-nigeria"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-norway')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-norway"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-paraguay')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-paraguay"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-peru')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-peru"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-poland')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-poland"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-portugal')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-portugal"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-qatar')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-qatar"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-romania')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-romania"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-russia')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-russia"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-senegal')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-senegal"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-singapore')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-singapore"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-spain')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-spain"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-sweden')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-sweden"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-switzerland')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-switzerland"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-taiwan')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-taiwan"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-tajikistan')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-tajikistan"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-vietnam')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-vietnam"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-flag-yemen')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-flag-yemen"></div>
+                    </div><br><br>
+                    <h6>Payment icons</h6>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-usdollar')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-usdollar"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-euro')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-euro"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-bitcoin')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-bitcoin"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-pound')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-pound"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-yen')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-yen"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-check-o')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-check-o lb-green"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-x-o')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-times-o lb-red"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-alert')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-alert lb-yellow"></div>
+                    </div><br>
+                    <div class="link-btn white-bg" onMouseOver="setClassBox('lb-lock')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-lock lb-black"></div>
                     </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-amex')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-amex"></div>
                     </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-discover')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-discover"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-visa')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-visa"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-mastercard')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-mastercard"></div>
+                    </div><div class="link-btn white-bg" onMouseOver="setClassBox('lb-creditcard')" onMouseOut="setClassBox('lb-*')">
+                        <div class="lb-icon lb-creditcard"></div>
                     </div>
         </div>
     <div class="row break">
@@ -394,32 +670,100 @@
             <div class="row text-center">
             	<h5>Use a preset color by adding an lb-*color* class to the littlebox icon.</h5>
             </div>
-            <div class="row text-center hidden-xs hidden-sm">
-            	<h5>&lt;div class="lb-icon <span id="icon-color">lb-*</span>"&gt;&lt;/div&gt;<br><small>(mouse over an icon to see it's class)</small></h5>
-            </div>
-            <div class="row break">
-            </div>
     <div class="row text-center color-showcase">
-                	<div class="link-btn" onMouseOver="setColorBox('lb-heart lb-red')" onMouseOut="setColorBox('lb-*')">
+                	<div class="link-btn" onMouseOver="setClassBox('lb-heart lb-red')" onMouseOut="setClassBox('lb-*')">
                     	<div class="lb-icon lb-heart lb-red"></div>
-                    </div><div class="link-btn" onMouseOver="setColorBox('lb-plus-o lb-green')" onMouseOut="setColorBox('lb-*')">
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-plus-o lb-green')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-plus-o lb-green"></div>
-                    </div><div class="link-btn" onMouseOver="setColorBox('lb-alert lb-yellow')" onMouseOut="setColorBox('lb-*')">
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-alert lb-yellow')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-alert lb-yellow"></div>
-                    </div><div class="link-btn" onMouseOver="setColorBox('lb-user lb-white')" onMouseOut="setColorBox('lb-*')">
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-user lb-white')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-user lb-white" ></div>
-                    </div><div class="link-btn" onMouseOver="setColorBox('lb-eye lb-purple')" onMouseOut="setColorBox('lb-*')">
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-eye lb-purple')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-eye lb-purple"></div>
-                    </div><div class="link-btn" onMouseOver="setColorBox('lb-camera lb-black')" onMouseOut="setColorBox('lb-*')">
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-camera lb-black')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-camera lb-black"></div>
-                    </div><div class="link-btn" onMouseOver="setColorBox('lb-denied lb-gray')" onMouseOut="setColorBox('lb-*')">
+                    </div><div class="link-btn" onMouseOver="setClassBox('lb-denied lb-gray')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-denied lb-gray"></div>
                     </div>
         </div>
+        <hr width="50%">
+        <div class="hidden-xs hidden-sm">
+            <div class="row text-center">
+            	<h4 class="col-md-8 col-md-offset-2">A few cool things you can do with littlebox icons:</h4>
+            </div>
+            <div class="row text-center">
+            		  <h6>Make a sweet audio player</h6>
+                      <div class="row">
+                      <div id="frewind-btn" class="link-btn" onMouseOver="setClassBox('lb-frewind')" onMouseOut="setClassBox('lb-*')">
+                          <div class="lb-icon lb-frewind"></div>
+                      </div><div id="play-btn" class="link-btn" onMouseOver="setClassBox('lb-play')" onMouseOut="setClassBox('lb-*')">
+                          <div class="lb-icon lb-play"></div>
+                      </div><div id="soundbar" class="link-btn" onMouseOver="setClassBox('lb-soundbar')" onMouseOut="setClassBox('lb-*')">
+                          <div class="lb-icon lb-soundbar-animoff"></div>
+                      </div><div class="link-btn" onMouseOver="setClassBox('lb-fforward')" onMouseOut="setClassBox('lb-*')">
+                          <div id="fforward-btn" class="lb-icon lb-fforward"></div>
+                    </div>
+                    <div class="progress"></div>
+                    <div class="row">
+                      </div><div id="like-btn" class="link-btn" onMouseOver="setClassBox('lb-heart')" onMouseOut="setClassBox('lb-*')">
+                          <div class="lb-icon lb-heart"></div>
+                      </div><div id="pause-btn" class="link-btn" onMouseOver="setClassBox('lb-pause')" onMouseOut="setClassBox('lb-*')">
+                          <div class="lb-icon lb-pause"></div>
+                      </div><div id="stop-btn"  class="link-btn" onMouseOver="setClassBox('lb-stop')" onMouseOut="setClassBox('lb-*')">
+                          <div class="lb-icon lb-stop"></div>
+                      </div><div id="mobile" class="link-btn" onMouseOver="setClassBox('lb-iphone')" onMouseOut="setClassBox('lb-*')">
+                          <div class="lb-icon lb-iphone"></div>
+                      </div>
+                    </div>
+                    <audio id="audio-file">
+        				<source src="http://littlebox.cabmaddux.com/lib/Cold_Killa.mp3" type="audio/mpeg" />
+        				Your browser does not support HTML5 audio.
+    				</audio>
+            </div>
+            <div class="row break">
+            </div> 
+            <div class="row text-center">
+            	<h6>Throw together a credit card fee calculator</h6>
+                <div class="row">
+                	<span id="curr-btns">
+                      <div id="usdollar" class="btn btn-info" style="margin-top:-2px;"><div class="lb-icon lb-usdollar"></div></div>
+                      <div id="euro" class="btn btn-info not-selected" style="margin-top:-2px;"><div class="lb-icon lb-euro"></div></div>
+                      <div id="yen" class="btn btn-info not-selected" style="margin-top:-2px;"><div class="lb-icon lb-yen"></div></div>
+                      <div id="pound" class="btn btn-info not-selected" style="margin-top:-2px;"><div class="lb-icon lb-pound"></div></div>
+                    </span>
+  				<input id="cc-amount" type="text" class="form-control" placeholder="What's the amount?" style="width:200px; display:inline-block;">
+                    <div id="calc-btn" class="btn btn-warning" style="margin-top:-2px;"><div class="lb-icon lb-singleright lb-white"></div></div>
+                </div>
+                <div class="row break">
+                </div>
+                <div class="row">
+                <table class="table text-center" style="width:300px; margin-left:auto; margin-right:auto;">
+  					<tr>
+                    	<th class="text-center">Card</th>
+                        <th class="text-center">Fee</th>
+                    </tr>
+                    <tr>
+                    	<td><div class="lb-icon lb-visa"></div></td>
+                        <td id="visa-calc">-</td>
+                    </tr>
+                    <tr>
+                    	<td><div class="lb-icon lb-mastercard"></div></td>
+                        <td id="mastercard-calc">-</td>
+                    </tr>
+                    <tr>
+                    	<td><div class="lb-icon lb-discover"></div></td>
+                        <td id="discover-calc">-</td>
+                    </tr>
+				</table>
+                </div>
+                <h6 style="color:red;"><div class="lb-icon lb-alert lb-red"></div>&nbsp;&nbsp;&nbsp;&nbsp;These calculations are by no means accurate. I did recklessly little research to build this calculator.</h6>
+            </div>
+          </div>
     <hr width="50%">
         <div class="row text-center">
             <h4 class="col-md-8 col-md-offset-2">
-                If you like these littlebox icons, have feedback, have questions or want to see a particular littlebox made, please let me know.<br><br>
+                If you like these littlebox icons, have feedback, have questions or want to see a particular littlebox icon made, please let me know.<br><br>
                 <a href="http://twitter.com/cabmaddux" target="_blank">
                 <div class="link-btn">
                         <div class="lb-icon lb-comment"></div>
@@ -427,7 +771,7 @@
                 </a>
             </h4>
          </div>
-    <div class="col-xs-8 text-right">
+    <div class="container-fluid text-center">
         <h3><img src="http://static.cabmaddux.com/cabellpic_2.jpg" alt="Cabell Maddux" class="img-circle" style="height:60px; margin-right: 10px;"><a href="http://cabmaddux.com" target="_blank">Hi, I'm Cabell. I started this project.</a></h3>
     </div>
     <div class="row break">
@@ -444,13 +788,106 @@
 function setClassBox(name) {
 	document.getElementById("icon-class").innerHTML = name;
 };
-function setColorBox(color) {
-	document.getElementById("icon-color").innerHTML = color;
-};
-setInterval(function(){ 
-	document.getElementById("transition-showcase").className =
-   		document.getElementById("transition-showcase").className.replace( /(?:^|\s)lb-user(?!\S)/g , '' );
-	document.getElementById("transition-showcase").className += " lb-x";
-}, 5000);
+
+$(document).ready(function(e) {
+	$("#audio-file").trigger('load');
+    $(function() {
+     $("#play-btn").click(function(e) {
+		$("#audio-file").trigger('play');
+		$(this).addClass('selected');
+		$('#pause-btn').removeClass('selected');
+		$('#soundbar div').removeClass('lb-soundbar-animoff');
+		$('#soundbar div').addClass('lb-soundbar');
+		setInterval(function() {
+		var currentTime = document.getElementById('audio-file').currentTime;
+		var totalTime = document.getElementById('audio-file').duration;
+		var percPassed = currentTime/totalTime;
+		var borderLeft = Math.floor(percPassed * 240);
+		var borderRight = 240 - borderLeft;
+		console.log(borderLeft);
+		console.log(borderRight);
+		audioCss = {"border-left": borderLeft + "px solid #3498DB", "border-right": borderRight + "px solid #1A6394"};
+		$(".progress").css(audioCss);
+	 }, 1000);
+	 });
+	});
+	$(function() {
+     $("#pause-btn").click(function(e) {
+		$("#audio-file").trigger('pause');
+		$(this).addClass('selected');
+		$('#play-btn').removeClass('selected');
+		$('#soundbar div').removeClass('lb-soundbar');
+		$('#soundbar div').addClass('lb-soundbar-animoff');
+	 });
+	});
+	$(function() {
+     $("#stop-btn").click(function(e) {
+		$("#audio-file").trigger('pause');
+		$('#play-btn, #pause-btn').removeClass('selected');
+		$('#soundbar div').removeClass('lb-soundbar');
+		$('#soundbar div').addClass('lb-soundbar-animoff');
+		document.getElementById('audio-file').currentTime = 0;
+	 });
+	});
+	$(function() {
+     $("#fforward-btn").click(function(e) {
+		$("#audio-file").trigger('pause');
+		document.getElementById('audio-file').currentTime = document.getElementById('audio-file').currentTime + 10;
+		$("#audio-file").trigger('play');
+	 });
+	});
+	$(function() {
+     $("#frewind-btn").click(function(e) {
+		$("#audio-file").trigger('pause');
+		document.getElementById('audio-file').currentTime = document.getElementById('audio-file').currentTime - 10;
+		$("#audio-file").trigger('play');
+	 });
+	});
+	$(function() {
+     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		 $('#mobile').addClass('selected');
+	  }
+	});
+	$(function() {
+     $("#like-btn").click(function(e) {
+		$( "#like-btn div" ).toggleClass('lb-red');
+	 });
+	});
+	var currency = "lb-usdollar";
+	$(function() {
+     $("#curr-btns > .btn-info").click(function(){
+    	$(this).removeClass("not-selected").siblings().addClass("not-selected");
+		var id = $(this).attr('id');
+		switch(id){
+			case "usdollar":
+				currency = "lb-usdollar";
+				break;
+			case "euro":
+				currency = "lb-euro";
+				break;
+			case "yen":
+				currency = "lb-yen";
+				break;
+			case "pound":
+				currency = "lb-pound";
+				break;
+			default:
+				currency = "lb-usdollar";
+		}
+	 });
+	});
+	var amount = 0;
+	$(function() {
+     $("#calc-btn").click(function(e) {
+		amount = $("#cc-amount").val();
+		visa = amount * 0.0013;
+		mastercard = amount * 0.0012;
+		discover = amount * 0.00105;
+		document.getElementById("visa-calc").innerHTML = "<div class='lb-icon " + currency +"'></div>&nbsp;&nbsp<b>" + visa.toFixed(4) + "</b>";
+		document.getElementById("mastercard-calc").innerHTML = "<div class='lb-icon " + currency +"'></div>&nbsp;&nbsp<b>" + mastercard.toFixed(4) + "</b>";
+		document.getElementById("discover-calc").innerHTML = "<div class='lb-icon " + currency +"'></div>&nbsp;&nbsp<b>" + discover.toFixed(4) + "</b>";
+	 });
+	});
+});
 </script> 
 </body>
