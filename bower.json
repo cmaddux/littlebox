@@ -1,6 +1,6 @@
 {
     "name": "littlebox",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Super simple to implement, CSS-only icons.",
     "main": "lib/littlebox.css",
     "author": "Cabell Maddux",
