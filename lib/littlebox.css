@@ -3,7 +3,7 @@
   text-align:left;
   vertical-align: middle;
 }
-        
+
 .lb-red, .lb-red::before, .lb-red::after {
 	border-color: #E74C3C !important;
 }
@@ -25,7 +25,7 @@
 .lb-white, .lb-white::before, .lb-white::after {
 	border-color: #FFFFFF !important;
 }
-        
+
 /*play littlebox icon*/
 .lb-play {
 	display:inline-block;
@@ -175,7 +175,7 @@
 	margin-bottom:0.4em;
 }
 /***/
-	
+
 
 /*sound bars littlebox icon*/
 .lb-soundbar-animoff {
@@ -580,8 +580,8 @@
     border-bottom: 1.2em inset transparent !important;
 	opacity:0.1;
 	margin-top:-1.8em;
-	-ms-transform: rotate(45deg); 
-    -webkit-transform: rotate(45deg); 
+	-ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 	font-size:5px;
 }
@@ -2072,7 +2072,7 @@
 	margin-top:7px;
 	width:2px;
 	height:16px;
-	border-bottom: 16px solid #3498DB; 
+	border-bottom: 16px solid #3498DB;
 	-ms-transform: rotate(-5deg); /* IE 9 */
     -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
     transform: rotate(-5deg);
@@ -2085,7 +2085,7 @@
 	margin-top:-5px;
 	margin-left:4px;
 	background-color:transparent !important;
-	border-bottom: 8px solid #3498DB; 
+	border-bottom: 8px solid #3498DB;
 }
 .lb-flag::after {
 	position:absolute;
@@ -2093,7 +2093,7 @@
 	width: 8px;
     height:8px;
     background-color:transparent !important;
-	border-bottom: 8px solid #3498DB; 
+	border-bottom: 8px solid #3498DB;
 	margin-top:-7px;
 }
 
@@ -3058,8 +3058,8 @@
 	margin-left:-4px;
 	border-radius:100%;
     background-color: transparent !important;
-	-ms-transform: rotate(-40deg); 
-    -webkit-transform: rotate(-40deg); 
+	-ms-transform: rotate(-40deg);
+    -webkit-transform: rotate(-40deg);
     transform: rotate(-40deg);
 }
 !!!*/
@@ -3261,26 +3261,26 @@
 .lb-flag-france {
 	display:inline-block;
 	vertical-align:middle;
-    width: 6px;
-    height: 12px;
+  width: 6px;
+  height: 12px;
 	margin-top:-2px;
-    border-bottom:12px solid rgba(238,238,238,1.00);
+  border-bottom:12px solid rgba(238,238,238,1.00);
 }
 .lb-flag-france::after {
 	position:absolute;
 	content:"";
-    width: 6px;
-    height: 12px;
+  width: 6px;
+  height: 12px;
 	margin-left:-6px;
-	border-bottom: 12px solid red !important;
+  border-bottom: 12px solid blue !important;
 }
 .lb-flag-france::before {
 	position:absolute;
 	content:"";
-    width: 6px;
-    height: 12px;
+  width: 6px;
+  height: 12px;
 	margin-left:6px;
-	border-bottom: 12px solid blue !important;
+  border-bottom: 12px solid red !important;
 }
 
 /*flag-germany littlebox icon*/
