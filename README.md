@@ -43,6 +43,8 @@ Compatibility is still being reveiwed.
 Suggestions, feedback and contributions to the icon library or compatibility would be greatly appreciated.
 
 # ToDo
+* Make icons scalable with EM units
+* Clean up jagged Firefox edges by setting transparent borders to 'inset'
 * Compatibility testing
 * Add to icon library
 * Improve animation compatibility
