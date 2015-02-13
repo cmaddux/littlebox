@@ -7,7 +7,7 @@
         <script type="text/javascript" src="http://static.cabmaddux.com/jquery-ui-1.10.4.custom/js/jquery_compressed.js"></script>
         <script type="text/javascript"  src="http://static.cabmaddux.com/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/bootstrap.min.css" />
-        <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/littlebox.0.0.3.min.css" />
+        <link rel="stylesheet" href="http://littlebox.cabmaddux.com/lib/littlebox.0.0.4.min.css" />
         <script src="//use.typekit.net/xnz2wnw.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <title>littlebox</title>
@@ -98,6 +98,15 @@
 		}
 		.link-btn:hover {
 			background-color: #D3D7D7; 
+		}
+		.scalable::before {
+			position:absolute;
+			content:"";
+			height:5px;
+			width:5px;
+			background-color:orange;
+			margin-left:-15px;
+			margin-top:-10px;
 		}
 		.white-bg {
 			background-color:white;
@@ -234,6 +243,7 @@
                   </code>
                 </div>
             </div>
+            <h6 class="text-center" style="color:red;"><div class="lb-icon lb-alert lb-red"></div>&nbsp;&nbsp;&nbsp;&nbsp;Compatibility for littlebox icons is still being tested. See the details <a href="https://github.com/cmaddux/littlebox.git" target="_blank">on GitHub</a>.</h6>
             <div class="row break">
             </div>
             <div class="row text-center">
@@ -249,26 +259,27 @@
             <hr width="50%">
             <div class="row text-center">
             	<h4 class="col-md-8 col-md-offset-2">The littlebox icon set:</h4>
+                <h6 class="col-md-8 col-md-offset-2">(If it has a orange dot, it scales by adding class .lb-*-lg or .lb-*-sm)</h5>
             </div>
             <h5 id="class-shown" class="text-left hidden-xs hidden-sm">&lt;div class="lb-icon <span id="icon-class">lb-*</span>"&gt;&lt;/div&gt;<br><small>(mouse over an icon to see its class)</small></h5>
             <div class="row break">
             </div>
         	<div class="row text-center">
-                	<div class="link-btn" onMouseOver="setClassBox('lb-play')" onMouseOut="setClassBox('lb-*')">
+                	<div class="link-btn scalable" onMouseOver="setClassBox('lb-play')" onMouseOut="setClassBox('lb-*')">
                     	<div class="lb-icon lb-play"></div>
-                    </div><div class="link-btn" onMouseOver="setClassBox('lb-soundbar')" onMouseOut="setClassBox('lb-*')">
+                    </div><div class="link-btn scalable" onMouseOver="setClassBox('lb-soundbar')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-soundbar"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-pause')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-pause"></div>
-                    </div><div class="link-btn" onMouseOver="setClassBox('lb-fforward')" onMouseOut="setClassBox('lb-*')">
+                    </div><div class="link-btn scalable" onMouseOver="setClassBox('lb-fforward')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-fforward"></div>
-                    </div><div class="link-btn" onMouseOver="setClassBox('lb-frewind')" onMouseOut="setClassBox('lb-*')">
+                    </div><div class="link-btn scalable" onMouseOver="setClassBox('lb-frewind')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-frewind"></div>
-                    </div><div class="link-btn" onMouseOver="setClassBox('lb-next')" onMouseOut="setClassBox('lb-*')">
+                    </div><div class="link-btn scalable" onMouseOver="setClassBox('lb-next')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-next"></div>
-                    </div><div class="link-btn" onMouseOver="setClassBox('lb-prev')" onMouseOut="setClassBox('lb-*')">
+                    </div><div class="link-btn scalable" onMouseOver="setClassBox('lb-prev')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-prev"></div>
-                    </div><div class="link-btn" onMouseOver="setClassBox('lb-stop')" onMouseOut="setClassBox('lb-*')">
+                    </div><div class="link-btn scalable" onMouseOver="setClassBox('lb-stop')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-stop"></div>
                     </div><br>
                     <div class="link-btn" onMouseOver="setClassBox('lb-speaker')" onMouseOut="setClassBox('lb-*')">
@@ -279,7 +290,7 @@
                         <div class="lb-icon lb-sidespeaker"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-talk')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-talk"></div>
-                    </div><div class="link-btn" onMouseOver="setClassBox('lb-earbud')" onMouseOut="setClassBox('lb-*')">
+                    </div><div class="link-btn scalable" onMouseOver="setClassBox('lb-earbud')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-earbud"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-comment')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-comment"></div>
@@ -391,7 +402,7 @@
                         <div class="lb-icon lb-alert"></div>
                     </div><br>
                     <div class="link-btn" onMouseOver="setClassBox('lb-iphone')" onMouseOut="setClassBox('lb-*')">
-                        <div class="lb-icon lb-iphone"></div>
+                        <div class="lb-icon lb-iphone lb-iphone-sm"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-macbook')" onMouseOut="setClassBox('lb-*')">
                         <div class="lb-icon lb-macbook"></div>
                     </div><div class="link-btn" onMouseOver="setClassBox('lb-tablet')" onMouseOut="setClassBox('lb-*')">
