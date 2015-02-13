@@ -504,45 +504,6 @@
 	font-size:5px;
 }
 
-/******************NOT YET SCALABLE
-.lb-ipod-sm, .lb-ipod-sm::before, .lb-ipod-sm::after {
-	font-size:4px;
-}
-
-/*Hacking around EM units for small ipod icon
-.lb-ipod-sm {
-	border-width:1px;
-	width:8px;
-}
-.lb-ipod-sm::before {
-	height:4px;
-	width:4px;
-	margin-left:1px;
-	border-width:2px;
-	margin-top:7px;
-}
-.lb-ipod-sm::after {
-	width:4px;
-	height:3px;
-	margin-left:1px;
-	border-bottom-width:4px;
-}
-/***
-
-.lb-ipod-lg, .lb-ipod-lg::before, .lb-ipod-lg::after {
-	font-size:6px;
-}
-
-/*Hacking around EM units for large ipod icon
-.lb-ipod-lg {
-	width:11px;
-}
-.lb-ipod-lg::before, .lb-ipod-lg::after {
-	margin-left:1px;
-}
-/***
-*/
-
 /*iphone littlebox icon*/
 /*!!! Slightly off on Chrome !!!*/
 .lb-iphone::before {
@@ -585,22 +546,6 @@
     transform: rotate(45deg);
 	font-size:5px;
 }
-
-/******************NOT YET SCALABLE
-.lb-iphone-sm, .lb-iphone-sm::before, .lb-iphone-sm::after {
-	font-size:4px;
-}
-
-/*Hacking around EM units for large ipod icon
-.lb-iphone-sm::after {
-	margin-top:-1.4em;
-}
-/***
-
-.lb-iphone-lg, .lb-iphone-lg::before, .lb-iphone-lg::after {
-	font-size:6px;
-}
-***/
 
 /*macbook littlebox icon*/
 /*!!! Slightly off on Chrome !!!*/
@@ -645,46 +590,6 @@
     transform: rotate(45deg);
 	font-size:5px;
 }
-
-/******************NOT YET SCALABLE
-.lb-macbook-sm, .lb-macbook-sm::before, .lb-macbook-sm::after {
-	font-size:4px;
-}
-
-/*Hacking around EM units for small macbook
-.lb-macbook-sm {
-	width:21px;
-	height:1px;
-	border-bottom-width:1px;
-}
-.lb-macbook-sm::before {
-	margin-left:-5px;
-}
-.lb-macbook-sm::after {
-	margin-left:6px;
-}
-
-.lb-macbook-lg, .lb-macbook-lg::before, .lb-macbook-lg::after {
-	font-size:6px;
-}
-
-/*Hacking around EM units for small macbook
-.lb-macbook-lg {
-	width:30px;
-	height:3px;
-	border-bottom-width:2px;
-	margin-top:-6px;
-}
-.lb-macbook-lg::before {
-	margin-left:-8px;
-	border-top-width:2px;
-	border-left-width:2px;
-	border-right-width:2px;
-}
-.lb-macbook-lg::after {
-	margin-left:6px;
-}
-***/
 
 /*tablet littlebox icon*/
 /*!!! Slightly off on Chrome !!!*/
@@ -3011,58 +2916,6 @@
 	border-left:4px solid #3498DB !important;
 	border-right:3px solid #3498DB !important;
 }
-
-/*nike littlebox icon*/
-/*!!!NEEDS WORK
-.lb-nike::before {
-	position:absolute;
-	content:"";
-    width:6px;
-    height:6px;
-	border:thin solid #3498DB;
-	border-top:none;
-	border-right:none;
-	border-bottom:none;
-	border-left-width:1px;
-	margin-top:1px;
-	margin-left:-1px;
-	border-radius:100%;
-    background-color: transparent !important;
-}
-.lb-nike::after {
-	position:absolute;
-	content:"";
-    width: 0;
-    height: 0;
-    border-top: 1px solid transparent !important;
-    border-left: 18px solid #3498DB;
-    border-bottom: 2px solid transparent !important;
-	vertical-align:middle;
-	margin-top:6.25px;
-	margin-left:-1px;
-	-ms-transform: rotate(10deg);
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg);
-}
-.lb-nike {
-	display:inline-block;
-	vertical-align:middle;
-    width:16px;
-    height:8px;
-	border:thin solid #3498DB;
-	border-top:none;
-	border-right:none;
-	border-bottom:none;
-	border-left-width:4px;
-	margin-top:-3px;
-	margin-left:-4px;
-	border-radius:100%;
-    background-color: transparent !important;
-	-ms-transform: rotate(-40deg);
-    -webkit-transform: rotate(-40deg);
-    transform: rotate(-40deg);
-}
-!!!*/
 
 /*usdollar littlebox icon*/
 .lb-usdollar {
