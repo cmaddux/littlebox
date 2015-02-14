@@ -3143,7 +3143,7 @@
     width: 18px;
     height: 4px;
 	margin-top:-2px;
-    border-bottom:4px solid black;
+    border-bottom:4px solid red;
 }
 .lb-flag-germany::after {
 	position:absolute;
@@ -3151,7 +3151,7 @@
     width: 18px;
     height: 4px;
 	margin-top:-4px;
-	border-bottom: 4px solid red !important;
+	border-bottom: 4px solid black !important;
 }
 .lb-flag-germany::before {
 	position:absolute;
