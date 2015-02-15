@@ -5,6 +5,8 @@
     "main": "lib/littlebox.css",
     "author": "Cabell Maddux",
     "ignore": [
-        "example"
+        "example",
+        "node_modules",
+        "gulpfile.js"
     ]
 }
