@@ -4542,7 +4542,7 @@
 	content:"";
     width: 18px;
     height: 6px;
-	margin-top:0px;
+	margin-top:6px;
 	border-bottom: 6px solid rgba(238,238,238,1.00) !important;
 }
 .lb-flag-indonesia::before {
@@ -4550,7 +4550,7 @@
 	content:"";
     width: 18px;
     height: 6px;
-	margin-top:6px;
+	margin-top:0px;
 	border-bottom: 6px solid red !important;
 }
 
