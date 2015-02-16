@@ -5,14 +5,15 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
- 
+
 // CSS concat, auto-prefix and minify
 gulp.task('css', function() {
   return gulp.src(['./lib/littlebox.css'])
+    .pipe(gulp.dest('./dist/')) //copy file to dist directory
     .pipe(concat('littlebox.min.css'))
     .pipe(autoprefix('last 2 versions'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./dist/')); //copy minified version to dist directory
 });
 
 // watch task

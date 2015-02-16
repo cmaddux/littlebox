@@ -1,0 +1,5832 @@
+/*A little box that holds a little box icon*/
+.lb-icon {
+  text-align:left;
+  vertical-align: middle;
+}
+
+.lb-red, .lb-red::before, .lb-red::after {
+	border-color: #E74C3C !important;
+}
+.lb-green, .lb-green::before, .lb-green::after {
+	border-color: #167F39 !important;
+}
+.lb-yellow, .lb-yellow::before, .lb-yellow::after {
+	border-color: #FFD34E !important;
+}
+.lb-purple, .lb-purple::before, .lb-purple::after {
+	border-color: #413659 !important;
+}
+.lb-black, .lb-black::before, .lb-black::after {
+	border-color: black !important;
+}
+.lb-gray, .lb-gray::before, .lb-gray::after {
+	border-color: #BBBBBB !important;
+}
+.lb-white, .lb-white::before, .lb-white::after {
+	border-color: #FFFFFF !important;
+}
+
+/*play littlebox icon*/
+.lb-play {
+	display:inline-block;
+    width: 0;
+    height: 0;
+    border-top: 1.5em inset transparent !important;
+    border-left: 3em solid #3498DB;
+    border-bottom: 1.5em inset transparent !important;
+	vertical-align:middle;
+	margin-bottom:0.4em;
+	font-size:5px;
+}
+.lb-play-sm {
+	font-size:3px;
+}
+.lb-play-lg {
+	font-size:7px;
+}
+
+/*Hacking around EM units for large play icon*/
+.lb-play-lg {
+	margin-bottom:0.3em;
+}
+/***/
+
+/*sound bars littlebox icon*/
+.lb-soundbar {
+	display: inline-block;
+	vertical-align:middle;
+	margin-left:1.4em;
+	margin-right:1.4em;
+	margin-bottom:0.6em;
+	border-bottom:2.4em solid #3498DB;
+	width: 1em;
+    height: 3em;
+	font-size:5px;
+    -webkit-animation: soundbar-middle-play linear 0.8s infinite alternate;
+    -moz-animation: soundbar-middle-play linear 0.8s infinite alternate;
+    -o-animation: soundbar-middle-play linear 0.8s infinite alternate;
+    animation: soundbar-middle-play linear 0.8s infinite alternate;
+}
+.lb-soundbar::before {
+	position:absolute;
+	content:"";
+	height: 3em;
+	width: 1em;
+	margin-left:-1.4em;
+	vertical-align:bottom;
+	border-bottom:1.6em solid #3498DB;
+	font-size:5px;
+    -webkit-animation: soundbar-left-play linear 1s infinite alternate;
+    -moz-animation: soundbar-left-play linear 1s infinite alternate;
+    -o-animation: soundbar-left-play linear 1s infinite alternate;
+    animation: soundbar-left-play linear 1s infinite alternate;
+}
+.lb-soundbar::after {
+	position:absolute;
+	vertical-align:bottom;
+	content:"";
+	width:1em;
+	height:3em;
+	margin-left:1.4em;
+	border-bottom:0.8em solid #3498DB;
+	font-size:5px;
+    -webkit-animation: soundbar-right-play linear 0.9s infinite alternate;
+    -moz-animation: soundbar-right-play linear 0.9s infinite alternate;
+    -o-animation: soundbar-right-play linear 0.9s infinite alternate;
+    animation: soundbar-right-play linear 0.9s infinite alternate;
+}
+@-webkit-keyframes soundbar-middle-play {
+  0% {
+    border-bottom:2.8em solid #3498DB;
+  }
+  50% {
+    border-bottom:0.8em solid #3498DB;
+  }
+  100% {
+    border-bottom:2.8em solid #3498DB;
+  }
+}
+@-moz-keyframes soundbar-middle-play {
+  0% {
+    border-bottom:2.8em solid #3498DB;
+  }
+  50% {
+    border-bottom:0.8em solid #3498DB;
+  }
+  100% {
+    border-bottom:2.8em solid #3498DB;
+  }
+}
+@-webkit-keyframes soundbar-left-play {
+  0% {
+     border-bottom:2.2em solid #3498DB;
+  }
+  50% {
+    border-bottom:0.6em solid #3498DB;
+  }
+  100% {
+    border-bottom:2.2em solid #3498DB;
+  }
+}
+@-moz-keyframes soundbar-left-play {
+  0% {
+     border-bottom:2.2em solid #3498DB;
+  }
+  50% {
+    border-bottom:0.6em solid #3498DB;
+  }
+  100% {
+    border-bottom:2.2em solid #3498DB;
+  }
+}
+@-webkit-keyframes soundbar-right-play {
+  0% {
+      border-bottom:0.4em solid #3498DB;
+  }
+  50% {
+      border-bottom:1.6em solid #3498DB;
+  }
+  100% {
+      border-bottom:0.4em solid #3498DB;
+  }
+}
+@-moz-keyframes soundbar-right-play {
+  0% {
+      border-bottom:0.4em solid #3498DB;
+  }
+  50% {
+      border-bottom:1.6em solid #3498DB;
+  }
+  100% {
+      border-bottom:0.4em solid #3498DB;
+  }
+}
+
+.lb-soundbar-sm, .lb-soundbar-sm::before, .lb-soundbar-sm::after {
+	font-size:3px;
+}
+
+.lb-soundbar-lg, .lb-soundbar-lg::before, .lb-soundbar-lg::after {
+	font-size:7px;
+}
+
+/*Hacking around EM units for large soundbar icon*/
+.lb-soundbar-lg {
+	margin-bottom:0.4em;
+}
+/***/
+
+
+/*sound bars littlebox icon*/
+.lb-soundbar-animoff {
+	display: inline-block;
+	vertical-align:middle;
+	margin-left:7px;
+	margin-right:7px;
+	margin-bottom:3px;
+	border-bottom:12px solid #3498DB;
+	width: 5px;
+    height: 15px;
+}
+.lb-soundbar-animoff::before {
+	position:absolute;
+	content:"";
+	height: 15px;
+	width: 5px;
+	margin-left:-7px;
+	vertical-align:bottom;
+	border-bottom:8px solid #3498DB;
+}
+.lb-soundbar-animoff::after {
+	position:absolute;
+	vertical-align:bottom;
+	content:"";
+	width:5px;
+	height:15px;
+	margin-left:7px;
+	border-bottom:4px solid #3498DB;
+}
+
+/*pause littlebox icon*/
+.lb-pause {
+	display:inline-block;
+    width: 1em;
+    height: 3em;
+    background-color:transparent !important;
+	vertical-align:middle;
+	margin-left:0.8em;
+	margin-right:0.8em;
+	margin-bottom:0.6em;
+	margin-top:0.2em;
+	font-size:5px;
+}
+.lb-pause::before {
+	content: "";
+	position:absolute;
+    width: 1em;
+    height: 3em;
+    border-bottom: 3em solid #3498DB;
+	margin-left:-0.8em;
+	font-size:5px;
+}
+.lb-pause::after {
+	content: "";
+	position:absolute;
+    width: 1em;
+    height: 3em;
+    border-bottom: 3em solid #3498DB;
+	margin-left:0.8em;
+	font-size:5px;
+}
+
+.lb-pause-sm, .lb-pause-sm::before, .lb-pause-sm::after {
+	font-size:3px;
+}
+
+.lb-pause-lg, .lb-pause-lg::before, .lb-pause-lg::after {
+	font-size:7px;
+}
+
+/*Hacking around EM units for large pause icon*/
+/***NEEDS WORK***/
+.lb-pause-lg {
+	margin-top:-0.3em;
+}
+/***/
+
+/*stop littlbox icon*/
+.lb-stop {
+	display:inline-block;
+    width: 3em;
+    height: 3em;
+    background-color:transparent !important;
+	vertical-align:middle;
+	border-bottom: 3em solid #3498DB;
+	margin-top:-0.2em;
+	font-size:5px;
+}
+
+.lb-stop-sm, .lb-stop-sm::before, .lb-stop-sm::after {
+	font-size:3px;
+}
+
+.lb-stop-lg, .lb-stop-lg::before, .lb-stop-lg::after {
+	font-size:7px;
+}
+
+/*fast forward littlebox icon*/
+.lb-fforward {
+	display:inline-block;
+	vertical-align:middle;
+    width: 1em;
+    height: 3em;
+	margin-left:1em;
+	margin-right:1.6em;
+	margin-bottom:0.6em;
+	background-color:transparent !important;
+	font-size:5px;
+}
+.lb-fforward::before {
+	position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 1.2em inset transparent !important;
+    border-left: 1.8em solid #3498DB;
+    border-bottom: 1.2em inset transparent !important;
+	margin-left: -1em;
+	margin-top: 0.4em;
+	font-size:5px;
+}
+.lb-fforward::after {
+	position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 1.2em inset transparent !important;
+    border-left: 1.8em solid #3498DB;
+    border-bottom: 1.2em inset transparent !important;
+	margin-left:0.8em;
+	margin-top: 0.4em;
+	font-size:5px;
+}
+
+.lb-fforward-sm, .lb-fforward-sm::before, .lb-fforward-sm::after {
+	font-size:3px;
+}
+
+.lb-fforward-lg, .lb-fforward-lg::before, .lb-fforward-lg::after {
+	font-size:7px;
+}
+
+/*Hacking around EM units for large prev icon*/
+.lb-fforward-lg {
+	margin-bottom:0.4em;
+}
+/***/
+
+/*fast rewind littlebox icon*/
+.lb-frewind {
+	display:inline-block;
+	vertical-align:middle;
+    width: 3em;
+    height: 3em;
+	margin-left:1.2em;
+	margin-right:1.4em;
+	margin-bottom:0.6em;
+	background-color:transparent !important;
+	font-size:5px;
+}
+.lb-frewind::before {
+	position:absolute;
+    content:"";
+    width: 0;
+    height: 0;
+    border-top: 1.2em inset transparent !important;
+    border-right: 1.8em solid #3498DB;
+    border-bottom: 1.2em inset transparent !important;
+	margin-left: -1.2em;
+	margin-top: 0.4em;
+	font-size:5px;
+}
+.lb-frewind::after {
+    position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 1.2em inset transparent !important;
+    border-right: 1.8em solid #3498DB;
+    border-bottom: 1.2em inset transparent !important;
+	margin-left: 0.6em;
+	margin-top: 0.4em;
+	font-size:5px;
+}
+
+.lb-frewind-sm, .lb-frewind-sm::before, .lb-frewind-sm::after {
+	font-size:3px;
+}
+
+.lb-frewind-lg, .lb-frewind-lg::before, .lb-frewind-lg::after {
+	font-size:7px;
+}
+
+/*Hacking around EM units for large prev icon*/
+.lb-frewind-lg {
+	margin-bottom:0.4em;
+}
+/***/
+
+/*next littlebox icon*/
+.lb-next {
+	display:inline-block;
+	vertical-align:middle;
+    width:1em;
+    height: 3em;
+	margin-left:0.8em;
+	margin-right:1.4em;
+	margin-bottom:0.2em;
+	background-color:transparent !important;
+	font-size:5px;
+}
+.lb-next::before {
+	position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 1.4em inset transparent !important;
+    border-left: 2.8em solid #3498DB;
+    border-bottom: 1.4em inset transparent !important;
+    margin-left:-0.8em;
+	font-size:5px;
+}
+.lb-next::after {
+	position:absolute;
+	content:"";
+    margin-left:2em;
+	width:0.4em;
+	height:2.8em;
+	border-bottom:2.8em solid #3498DB;
+	font-size:5px;
+}
+
+.lb-next-sm, .lb-next-sm::before, .lb-next-sm::after {
+	font-size:2.5px;
+}
+
+.lb-next-lg, .lb-next-lg::before, .lb-next-lg::after {
+	font-size:7.5px;
+}
+
+/*Hacking around EM units for large prev icon*/
+.lb-next-lg {
+	margin-bottom:0.1em;
+}
+/***/
+
+/*previous littlebox icon*/
+.lb-prev {
+    display:inline-block;
+	vertical-align:middle;
+    width:1em;
+    height:3em;
+	margin-left:0.8em;
+	margin-right:1.4em;
+	margin-bottom:0.2em;
+	background-color:transparent !important;
+	font-size:5px;
+}
+.lb-prev::before {
+	position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 1.4em inset transparent !important;
+    border-right: 2.8em solid #3498DB;
+    border-bottom: 1.4em inset transparent !important;
+    margin-left:-0.4em;
+	font-size:5px;
+}
+.lb-prev::after {
+    position:absolute;
+	content:"";
+    margin-left:-0.8em;
+	width:0.4em;
+	height:2.8em;
+	border-bottom:2.8em solid #3498DB;
+	font-size:5px;
+}
+
+.lb-prev-sm, .lb-prev-sm::before, .lb-prev-sm::after {
+	font-size:2.5px;
+}
+
+.lb-prev-lg, .lb-prev-lg::before, .lb-prev-lg::after {
+	font-size:7.5px;
+}
+
+/*Hacking around EM units for large prev icon*/
+.lb-prev-lg {
+	margin-bottom:0.1em;
+}
+/***/
+
+/*ipod littlebox icon*/
+/*!!! Slightly off on Chrome !!!*/
+.lb-ipod {
+    display:inline-block;
+	vertical-align:middle;
+    width:2em;
+    height:3.4em;
+    border:0.2em solid #3498DB;
+	margin-bottom:0.4em;
+	font-size:5px;
+}
+.lb-ipod::before {
+    position:absolute;
+	content:"";
+    width:1.2em;
+    height:1.2em;
+	margin-left:0.2em;
+	margin-top:1.6em;
+    border-radius:100%;
+    border: 0.4em solid #3498DB;
+	opacity: 1;
+	font-size:5px;
+}
+.lb-ipod::after {
+    position:absolute;
+	content:"";
+    width:1.2em;
+    height:1em;
+    margin-left:0.2em;
+	margin-top:0.2em;
+    border-bottom: 1em solid #3498DB;
+	font-size:5px;
+}
+
+/*iphone littlebox icon*/
+/*!!! Slightly off on Chrome !!!*/
+.lb-iphone::before {
+    position:absolute;
+	content:"";
+    width:2em;
+    height:4em;
+    border-left:1px solid #3498DB;
+	border-right:1px solid #3498DB;
+	border-top: 0.6em solid #3498DB;
+	border-bottom: 0.8em solid #3498DB;
+	margin-top:-3.4em;
+	margin-left: -0.8em;
+	opacity:0.5;
+	border-radius:1px;
+	font-size:5px;
+}
+.lb-iphone {
+    display:inline-block;
+	vertical-align:bottom;
+    width:0.4em;
+    height:0.4em;
+    border-radius:100%;
+    border-bottom:0.4em solid #3498DB;
+	margin-top:-0.6em;
+	font-size:5px;
+}
+.lb-iphone::after {
+    position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 1.2em inset transparent !important;
+    border-left: 1.2em solid #3498DB;
+    border-bottom: 1.2em inset transparent !important;
+	opacity:0.1;
+	margin-top:-1.8em;
+	-ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+	font-size:5px;
+}
+
+/*macbook littlebox icon*/
+/*!!! Slightly off on Chrome !!!*/
+.lb-macbook::before {
+    position:absolute;
+	content:"";
+    width:4.4em;
+    height:2.6em;
+    border:1px solid #3498DB;
+	margin-top:-2.6em;
+	margin-left:-1.6em;
+	opacity:0.5;
+	border-radius:1px;
+	font-size:5px;
+}
+.lb-macbook {
+    display:inline-block;
+	vertical-align:bottom;
+    width: 4.8em;
+    height:0.4em;
+	border-radius: 0px 0px 1px 1px;
+    border-bottom:1px solid #3498DB;
+	border-left:1.8em solid #3498DB;
+	border-right:1.8em solid #3498DB;
+	margin-top:-1.4em;
+	margin-left:-0.4em;
+	font-size:5px;
+}
+.lb-macbook::after {
+    position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 1.8em inset transparent !important;
+    border-left: 1.8em solid #3498DB;
+    border-bottom: 1.8em inset transparent !important;
+	opacity:0.1;
+	margin-top:-2.6em;
+	margin-left:1.05em;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+	font-size:5px;
+}
+
+/*tablet littlebox icon*/
+/*!!! Slightly off on Chrome !!!*/
+.lb-tablet::before {
+    position:absolute;
+	content:"";
+    width: 16px;
+    height:22px;
+    border-left:2px solid #3498DB;
+	border-right:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+	border-bottom:4px solid #3498DB;
+	margin-top:-19px;
+	margin-left: -7px;
+	opacity:0.5;
+	border-radius:1px;
+}
+.lb-tablet {
+    display:inline-block;
+	vertical-align:bottom;
+    width: 2px;
+    height:2px;
+    border-radius:100%;
+    border-bottom:2px solid #3498DB;
+	margin-top:-3px;
+}
+.lb-tablet::after {
+    position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top:9px solid transparent !important;
+    border-left: 9px solid #3498DB;
+    border-bottom:9px solid transparent !important;
+	opacity:0.1;
+	margin-top:-13px;
+	margin-left:0px;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+/*desktop littlebox icon*/
+/*!!! Slightly off on Chrome !!!*/
+.lb-desktop {
+    display:inline-block;
+	vertical-align:middle;
+    width: 22px;
+    height:16px;
+    border:1px solid #3498DB;
+	border-bottom-width:3px;
+	border-radius:1px;
+	margin-top:-2px;
+	margin-left:-1px;
+}
+.lb-desktop::before {
+    position:absolute;
+	content:"";
+    width:0;
+    height:0;
+	border-left: 4px solid transparent !important;
+    border-bottom: 6px solid #3498DB;
+    border-right: 4px solid transparent !important;
+	margin-top:12px;
+	margin-left:6px;
+	opacity:0.5;
+}
+.lb-desktop::after {
+    position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent !important;
+    border-left: 9px solid #3498DB;
+    border-bottom: 9px solid transparent !important;
+	opacity:0.1;
+	margin-top:0px;
+	margin-left:12px;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+/*speaker littlebox icon*/
+/*!!! Slightly off on Chrome !!!*/
+.lb-speaker {
+    display:inline-block;
+	vertical-align:middle;
+    width: 10px;
+    height:17px;
+    background-color: transparent;
+    border: thin solid #3498DB;
+	margin-bottom:2px;
+	font-size:5px;
+}
+.lb-speaker::before {
+    position:absolute;
+	content:"";
+    width: 6px;
+    height:6px;
+	margin-left:1px;
+	margin-top:8px;
+    border-radius:100%;
+    border: 2px solid #3498DB;
+}
+.lb-speaker::after {
+    position:absolute;
+	content:"";
+    width: 4px;
+    height:4px;
+    margin-left:2px;
+	margin-top:2px;
+	border-radius: 100%;
+    border: 1px double #3498DB;
+}
+
+/*headphones littlbox icon*/
+.lb-beats {
+    display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height:15px;
+    border-radius: 10px 10px 0px 0px;
+    border: 1.5px solid #3498DB;
+    border-bottom:none;
+	margin-bottom:3px;
+}
+.lb-beats::before {
+    position:absolute;
+	content:"";
+    width: 4px;
+    height:6px;
+    margin-top:9px;
+    margin-left:-1px;
+    border:2px solid #3498DB;
+	border-radius: 10px 4px 4px 10px;
+}
+.lb-beats::after {
+    position:absolute;
+	content:"";
+    width: 4px;
+    height:6px;
+    margin-top:9px;
+    margin-left:12px;
+    border-radius:2px;
+    border:2px solid #3498DB;
+	border-radius: 4px 10px 10px 4px;
+}
+
+/*side-speaker littlebox icon*/
+.lb-sidespeaker {
+    display:inline-block;
+	vertical-align:middle;
+    width: 0;
+    height: 0;
+    border-top: 6px inset transparent !important;
+    border-right: 12px solid #3498DB;
+    border-bottom: 6px inset transparent !important;
+	background-color:transparent !important;
+	margin-bottom:1px;
+	margin-right:8px;
+}
+.lb-sidespeaker::before {
+    position:absolute;
+	content: "";
+    width: 4px;
+    height:4px;
+	margin-top:-2px;
+    border-radius:1px;
+    border-bottom:4px solid #3498DB;
+}
+.lb-sidespeaker::after {
+    position:absolute;
+	content: "";
+    width: 2px;
+    height:12px;
+    margin-left:8px;
+    border-right:2px solid #3498DB;
+    border-radius: 0px 3px 3px 0px;
+    -webkit-animation: side-speaker-right-play linear 0.3s infinite alternate;
+    -moz-animation: side-speaker-right-play linear 0.3s infinite alternate;
+    -o-animation: side-speaker-right-play linear 0.3s infinite alternate;
+    animation: side-speaker-right-play linear 0.3s infinite alternate;
+}
+@-webkit-keyframes side-speaker-right-play {
+  0% {
+      height:12px;
+      margin-top:-6px;
+      margin-left:13px;
+  }
+  33% {
+      height:14px;
+      margin-top:-7px;
+      margin-left:15px;
+  }
+  66% {
+      height:16px;
+      margin-top:-8px;
+      margin-left:17px;
+  }
+  100% {
+      height:18px;
+      margin-top:-9px;
+      margin-left:19px;
+  }
+}
+@-moz-keyframes side-speaker-right-play {
+  0% {
+      height:12px;
+      margin-top:-6px;
+      margin-left:13px;
+  }
+  33% {
+      height:14px;
+      margin-top:-7px;
+      margin-left:15px;
+  }
+  66% {
+      height:16px;
+      margin-top:-8px;
+      margin-left:17px;
+  }
+  100% {
+      height:18px;
+      margin-top:-9px;
+      margin-left:19px;
+  }
+}
+
+/*talking littlebox icon*/
+.lb-talk {
+    display:inline-block;
+	vertical-align:top;
+    width:10px;
+    height:2px;
+    border-radius: 7px;
+	margin-right:3px;
+    background: transparent !important;
+	border: 2px solid #3498DB;
+    -webkit-animation: talking-left-play linear 0.8s infinite alternate;
+    -moz-animation: talking-left-play linear 0.8s infinite alternate;
+    -o-animation: talking-left-play linear 0.8s infinite alternate;
+    animation: talking-left-play linear 0.8s infinite alternate;
+}
+.lb-talk::before {
+    position:absolute;
+	content:"";
+    width: 3px;
+    height:3px;
+	margin-top:-10px;
+    border-radius: 100%;
+    border: 2px solid #3498DB;
+	background:transparent;
+}
+.lb-talk::after {
+    position:absolute;
+	content:"";
+    width: 3px;
+    margin-left: 10px;
+    height:3px;
+	margin-top:-10px;
+    border-radius: 100%;
+    border: 2px solid #3498DB;
+	background:transparent;
+}
+@-webkit-keyframes talking-left-play {
+  0% {
+	margin-top:15px;
+    height:1px;
+    border-radius: 7px;
+  }
+  33% {
+	margin-top:9px;
+    height:7px;
+	width:7px;
+	margin-right:6px;
+    border-radius: 100%;
+  }
+  66% {
+	margin-top:13px;
+    height:3px;
+    border-radius: 20px;
+  }
+  100% {
+	margin-top:10px;
+    height:6px;
+    border-radius: 4px;
+  }
+}
+@-moz-keyframes talking-left-play {
+  0% {
+	margin-top:15px;
+    height:1px;
+    border-radius: 7px;
+  }
+  33% {
+	margin-top:9px;
+    height:7px;
+	width:7px;
+	margin-right:6px;
+    border-radius: 100%;
+  }
+  66% {
+	margin-top:13px;
+    height:3px;
+    border-radius: 20px;
+  }
+  100% {
+	margin-top:10px;
+    height:6px;
+    border-radius: 4px;
+  }
+}
+
+/*earbud littlebox icon*/
+.lb-earbud {
+	display:inline-block;
+	vertical-align:middle;
+    width:2em;
+    height:2em;
+	margin-right:2.2em;
+	margin-bottom:1.6em;
+    border-radius: 2em 0px 0px 2em;
+    background-color:transparent !important;
+	border-top:1em solid #3498DB;
+	border-bottom:1em solid #3498DB;
+	font-size:5px;
+}
+.lb-earbud::before {
+	position:absolute;
+	content:"";
+    width:2em;
+    margin-left:2.2em;
+    height:2.4em;
+    border-radius: 0.4em 0.8em 0.8em 0.4em;
+    background-color:transparent !important;
+	border-top:1.2em solid #3498DB;
+	border-bottom:1.2em solid #3498DB;
+    margin-top:-1.2em;
+	font-size:5px;
+}
+.lb-earbud::after {
+	position:absolute;
+	content:"";
+    width:0.4em;
+    margin-left:1em;
+    height:1.6em;
+    margin-top:0.8em;
+    background-color:transparent !important;
+	border-bottom:1.6em solid #3498DB;
+	font-size:5px;
+}
+
+.lb-earbud-sm, .lb-earbud-sm::before, .lb-earbud-sm::after {
+	font-size:2.5px;
+}
+
+/*Hacking around EM units for small earbud icon*/
+.lb-earbud-sm {
+	height:1.7em;
+}
+/***/
+
+.lb-earbud-lg, .lb-earbud-lg::before, .lb-earbud-lg::after {
+	font-size:7.5px;
+}
+
+/*Hacking around EM units for large earbud icon*/
+.lb-earbud-lg {
+	height:1.7em;
+	margin-bottom:1.3em;
+	margin-left:-0.5em;
+}
+/***/
+
+/*Being removed in a future version*/
+/*vinyl littlebox icon*/
+.lb-vinyl {
+	display: inline-block;
+	vertical-align: middle;
+    width: 18px;
+    margin-bottom:2px;
+	margin-top:1px;
+	margin-left:1px;
+	margin-right:1px;
+    height:18px;
+    border:8px double #3498DB;
+    border-radius: 100%;
+}
+.lb-vinyl::before {
+	position:absolute;
+	content:"";
+    width: 20px;
+    margin-left:-9px;
+	margin-top:-7px;
+    height:16px;
+    border:1px solid #3498DB;
+}
+.lb-vinyl::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-75deg); /* IE 9 */
+    -webkit-transform: rotate(-75deg); /* Chrome, Safari, Opera */
+    transform: rotate(-75deg);
+    width: 1px;
+    margin-left: 7px;
+	margin-top:-6px;
+    height:8px;
+    background-color:transparent !important;
+	border-bottom:8px solid #3498DB;
+}
+
+/*search littlebox icon*/
+.lb-search {
+	display:inline-block;
+    width:1em;
+    height:3em;
+    background-color:transparent;
+	vertical-align:middle;
+	margin-left:0.6em;
+	margin-right:1.4em;
+	font-size:5px;
+}
+.lb-search::before {
+	position:absolute;
+	content:"";
+    width:2.8em;
+    height:2.8em;
+    margin-top:-0.8em;
+    margin-left:-0.6em;
+    border-radius:100%;
+    border:0.6em solid #3498DB;
+    background-color:transparent !important;
+	font-size:5px;
+}
+.lb-search::after {
+	position:absolute;
+	content:"";
+	-ms-transform: rotate(60deg); /* IE 9 */
+    -webkit-transform: rotate(60deg); /* Chrome, Safari, Opera */
+    transform: rotate(60deg);
+    width:1.8em;
+	height:0.6em;
+    margin-top:2em;
+    margin-left:0.8em;
+	background-color:transparent !important;
+	border-bottom:0.6em solid #3498DB;
+	font-size:5px;
+}
+
+.lb-search-sm, .lb-search-sm::before, .lb-search-sm::after {
+	font-size:2.5px;
+}
+
+.lb-search-lg, .lb-search-lg::before, .lb-search-lg::after {
+	font-size:7.5px;
+}
+
+/*lock littlebox icon*/
+.lb-lock {
+	display:inline-block;
+	vertical-align:middle;
+    width: 13px;
+    height:11px;
+    background-color: transparent !important;
+	border:2px solid #3498DB;
+	margin-top:1px;
+}
+.lb-lock::after {
+	position:absolute;
+	content: "";
+    width: 8px;
+    height:8px;
+    margin-top:-6px;
+	margin-left:0px;
+    border-radius:100%;
+    border-left: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	border-right: 2px solid transparent !important;
+	border-bottom: 2px solid transparent !important;
+	background-color:transparent !important;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+/*edit littlebox icon*/
+.lb-edit {
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:2px;
+	margin-bottom:4px;
+	width:17px;
+	height:6px;
+	background-color:transparent !important;
+	border-bottom: 6px solid #3498DB;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+.lb-edit::after {
+	position:absolute;
+	content:"";
+	width: 0;
+    height: 0;
+    border-top: 3px inset transparent !important;
+    border-right: 5px solid #3498DB;
+    border-bottom: 3px inset transparent !important;
+	background-color:transparent;
+    margin-left:-6px;
+    margin-top:0px;
+}
+
+/*phone littlebox icon*/
+.lb-phone {
+	display:inline-block;
+	vertical-align:middle;
+    width: 20px;
+	margin-right:2px;
+    height:7px;
+    border-radius: 10px 10px 0px 0px;
+    border: 3px solid #3498DB;
+	border-left-width: 6px;
+	border-right-width: 6px;
+    border-bottom:none;
+	-ms-transform: rotate(-125deg); /* IE 9 */
+    -webkit-transform: rotate(-125deg); /* Chrome, Safari, Opera */
+    transform: rotate(-125deg);
+	background-color:transparent !important;
+}
+
+/*tag littlebox icon*/
+.lb-tag {
+	display:inline-block;
+	vertical-align:middle;
+	width: 12px;
+    height:11px;
+	margin-left:3px;
+	margin-right:1px;
+    border-radius: 2px 0px 0px 2px;
+	border:3px #3498DB solid;
+	background-color:transparent !important;
+	border-right:none;
+	border-left-width:10px;
+	-ms-transform: rotate(-125deg); /* IE 9 */
+    -webkit-transform: rotate(-125deg); /* Chrome, Safari, Opera */
+    transform: rotate(-125deg);
+}
+.lb-tag::after {
+	position:absolute;
+	content:"";
+	width: 11px;
+	margin-top:-3px;
+    margin-left:-4px;
+    height:11px;
+    border:4px solid #3498DB;
+	background-color:transparent !important;
+    border-radius: 100%;
+}
+
+/*file littlebox icon*/
+.lb-file::before {
+	position:absolute;
+	content:"";
+	margin-left:2px;
+	margin-top:1.5px;
+	width:8.5px;
+	height:10px;
+	background-color:transparent !important;
+	border-bottom: 10px solid #3498DB;
+	opacity:0.5;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+.lb-file {
+	display:inline-block;
+	vertical-align:middle;
+    width: 16px;
+    height:19px;
+	margin-bottom:1px;
+    border: 2px solid #3498DB;
+	background-color: transparent !important;
+	border-left:none;
+	border-top:none;
+	border-right-width:10px;
+	border-bottom-width:13px;
+}
+
+/*folder littlebox icon*/
+.lb-folder {
+	display:inline-block;
+	vertical-align:middle;
+	background-color:transparent !important;
+    width: 20px;
+    margin:0px;
+    height:11px;
+	border-bottom:11px solid #3498DB;
+	border-radius:1px;
+}
+.lb-folder::before {
+	position:absolute;
+	content:"";
+	width: 6px;
+    height:2px;
+    margin-top:-3px;
+	background-color:transparent !important;
+	border-top:2px solid #3498DB;
+	border-radius:1px 1px 0px 0px;
+	opacity:0.6;
+}
+.lb-folder::after {
+	position:absolute;
+	content:"";
+	background-color:transparent !important;
+	border-top:11px solid #3498DB;
+    width: 20px;
+    margin-top:-1px;
+    height:11px;
+	opacity:0.6
+}
+
+/*locate littlebox icon*/
+.lb-locate {
+	display:inline-block;
+	vertical-align:middle;
+	width: 0;
+    height: 0;
+    border-right: 4px inset transparent !important;
+    border-top: 14px solid #3498DB;
+    border-left: 4px inset transparent !important;
+	background-color:transparent !important;
+    margin-top:3px;
+	margin-bottom:1px;
+}
+.lb-locate::before {
+	position:absolute;
+	content:"";
+	width: 8px;
+	margin-top:-19px;
+	margin-left:-4px;
+    height:8px;
+    border:3px solid #3498DB;
+	background-color:transparent !important;
+    border-radius: 100%;
+}
+
+/*eject littlebox icon*/
+.lb-eject {
+	display:inline-block;
+	vertical-align:middle;
+    width: 0;
+    height: 0;
+    border-right: 11px inset transparent !important;
+    border-bottom: 8px solid #3498DB;
+    border-left: 11px inset transparent !important;
+    margin-top:-6px;
+}
+.lb-eject::after {
+	position:absolute;
+	content:"";
+	margin-top:10px;
+	margin-left:-11px;
+	width:22px;
+	height:2px;
+	background-color:transparent !important;
+	border-bottom:2px solid #3498DB;
+}
+
+/*burger littlebox icon*/
+.lb-burger {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+    height: 3px;
+    width: 20px;
+    margin-bottom: 2px;
+    border-bottom:3px solid #3498DB;
+	border-radius: 3px;
+}
+.lb-burger::before {
+	position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+    margin-top:-7px;
+	height: 3px;
+    width: 20px;
+    border-radius: 3px;
+}
+.lb-burger::after {
+    position:absolute;
+	content:"";
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+    margin-top:7px;
+	height: 3px;
+    width: 20px;
+    border-radius: 3px;
+}
+
+/*leftarrow littlebox icon*/
+.lb-larrow {
+	display:inline-block;
+	vertical-align:middle;
+    width:20px;
+	height:3px;
+    margin-bottom:2px;
+	background-color:transparent !important;
+	border-bottom: 3px solid #3498DB;
+}
+.lb-larrow::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+    width:10px;
+	height:3px;
+    margin-top:-2px;
+	margin-left:-1px;
+	border-radius:3px;
+	background-color:transparent !important;
+	border-left: 10px solid #3498DB;
+}
+.lb-larrow::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    transform: rotate(30deg);
+    width:10px;
+	height:3px;
+    margin-top:2px;
+    margin-left:-1px;
+	border-radius:3px;
+	background-color:transparent !important;
+	border-left: 10px solid #3498DB;
+}
+@-webkit-keyframes wag-left {
+  0% {
+    margin-left: 0px;
+  }
+  25% {
+    margin-left: -1px;
+  }
+  50% {
+    margin-left: 0px;
+  }
+  75% {
+    margin-left: 1px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+/*right arrow littlebox icon*/
+.lb-rarrow {
+	display:inline-block;
+	vertical-align:middle;
+    width:20px;
+	height:3px;
+    margin-bottom:2px;
+	margin-right:1px;
+	background-color:transparent !important;
+	border-bottom: 3px solid #3498DB;
+}
+.lb-rarrow::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    transform: rotate(30deg);
+    width:10px;
+	height:3px;
+    margin-top:-2px;
+	margin-left:12px;
+	border-radius:3px;
+	background-color:transparent !important;
+	border-right: 10px solid #3498DB;
+}
+.lb-rarrow::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+    width:10px;
+	height:3px;
+    margin-top:2px;
+	margin-left:12px;
+	border-radius:3px;
+	background-color:transparent !important;
+	border-right: 10px solid #3498DB;
+}
+@-webkit-keyframes wag-right {
+    0% {
+        margin-left: 0px;
+    }
+    25% {
+        margin-left: 1px;
+    }
+    50% {
+        margin-left: 0px;
+    }
+    75% {
+        margin-left: -1px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+
+/*double left littlebox icon*/
+.lb-doubleleft{
+	display:inline-block;
+	vertical-align:middle;
+    width:20px;
+	height:15px;
+	background-color:transparent !important;
+}
+.lb-doubleleft::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-left: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	margin-left:5px;
+	margin-top:1px;
+}
+.lb-doubleleft::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-left: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	margin-left:11px;
+	margin-top:1px;
+}
+
+/*double right littlebox icon*/
+.lb-doubleright{
+	display:inline-block;
+	vertical-align:middle;
+    width:20px;
+	height:15px;
+	background-color:transparent !important;
+}
+.lb-doubleright::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-right: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	margin-top:1px;
+}
+.lb-doubleright::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-right: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	margin-left:6px;
+	margin-top:1px;
+}
+
+/*double up littlebox icon*/
+.lb-doubleup{
+	display:inline-block;
+	vertical-align:middle;
+    width:20px;
+	height:15px;
+	background-color:transparent !important;
+}
+.lb-doubleup::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-right: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	margin-left:5px;
+}
+.lb-doubleup::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-right: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	margin-left:5px;
+	margin-top:6px;
+}
+
+/*double down littlebox icon*/
+.lb-doubledown{
+	display:inline-block;
+	vertical-align:middle;
+    width:20px;
+	height:15px;
+	background-color:transparent !important;
+}
+.lb-doubledown::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-left: 2px solid #3498DB;
+	border-bottom: 2px solid #3498DB;
+	margin-left:5px;
+	margin-top:-5px
+}
+.lb-doubledown::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-left: 2px solid #3498DB;
+	border-bottom: 2px solid #3498DB;
+	margin-left:5px;
+	margin-top:1px;
+}
+
+/*single left littlebox icon*/
+.lb-singleleft{
+	display:inline-block;
+	vertical-align:middle;
+    width:20px;
+	height:15px;
+	background-color:transparent !important;
+}
+.lb-singleleft::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-left: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	margin-left:8px;
+	margin-top:1px;
+}
+
+/*single right littlebox icon*/
+.lb-singleright{
+	display:inline-block;
+	vertical-align:middle;
+    width:20px;
+	height:15px;
+	background-color:transparent !important;
+}
+.lb-singleright::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    width:10px;
+	height:10px;
+	background-color:transparent !important;
+	border-right: 2px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	margin-left:3px;
+	margin-top:1px;
+}
+
+/*left carrot littlebox icon*/
+.lb-rcaret::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+    width:17px;
+	height:3px;
+    margin-top:9px;
+	background-color:transparent !important;
+	border-right: 17px solid #3498DB;
+    border-radius:3px;
+}
+.lb-rcaret {
+    display:inline-block;
+	vertical-align:middle;
+    width: 15px;
+    height: 15px;
+    background-color:transparent !important;
+	vertical-align:middle;
+	margin-right:2px;
+	margin-bottom:1px;
+}
+.lb-rcaret::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    transform: rotate(30deg);
+    width:17px;
+	height:3px;
+    margin-top:2px;
+	background-color:transparent !important;
+	border-right: 17px solid #3498DB;
+    border-radius:3px;
+}
+
+/*right carrot littlebox icon*/
+.lb-lcaret::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    transform: rotate(30deg);
+    width:17px;
+	height:3px;
+    margin-top:9px;
+	background-color:transparent !important;
+	border-left: 17px solid #3498DB;
+    border-radius:3px;
+}
+.lb-lcaret {
+    display:inline-block;
+	vertical-align:middle;
+    width: 15px;
+    height: 15px;
+    background-color:transparent !important;
+	vertical-align:middle;
+	margin-right:2px;
+	margin-bottom:1px;
+}
+.lb-lcaret::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+    width:17px;
+	height:3px;
+    margin-top:2px;
+	background-color:transparent !important;
+	border-left: 17px solid #3498DB;
+    border-radius:3px;
+}
+
+/*down carrot littlebox icon*/
+.lb-downcaret::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    transform: rotate(30deg);
+    width:3px;
+	height:17px;
+    margin-left:9px;
+	background-color:transparent !important;
+	border-bottom: 17px solid #3498DB;
+    border-radius:3px;
+}
+.lb-downcaret {
+    display:inline-block;
+	vertical-align:middle;
+    width: 15px;
+    height: 15px;
+    background-color:transparent !important;
+	vertical-align:middle;
+	margin-left:1px;
+	margin-bottom:3px;
+}
+.lb-downcaret::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+    width:3px;
+	height:17px;
+    margin-left:2px;
+	background-color:transparent !important;
+	border-bottom: 17px solid #3498DB;
+    border-radius:3px;
+}
+
+/*up carrot littlebox icon*/
+.lb-upcaret::after {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+    width:3px;
+	height:17px;
+    margin-left:9px;
+	background-color:transparent !important;
+	border-top: 17px solid #3498DB;
+    border-radius:3px;
+}
+.lb-upcaret {
+    display:inline-block;
+	vertical-align:middle;
+    width: 15px;
+    height: 15px;
+    background-color:transparent !important;
+	vertical-align:middle;
+	margin-left:1px;
+	margin-bottom:3px;
+}
+.lb-upcaret::before {
+	position:absolute;
+	content:"";
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    transform: rotate(30deg);
+    width:3px;
+	height:17px;
+    margin-left:2px;
+	background-color:transparent !important;
+	border-top: 17px solid #3498DB;
+    border-radius:3px;
+}
+
+/*left arrow circle littlebox icon*/
+.lb-larrow-o::before {
+	position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 2px solid transparent !important;
+    border-right: 4px solid #3498DB;
+    border-bottom: 2px solid transparent !important;
+    margin-left:2px;
+    margin-top:5px;
+}
+.lb-larrow-o {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+	margin-bottom:1px;
+    height:18px;
+    border:2px solid #3498DB;
+	background-color:transparent !important;
+    border-radius: 100%;
+}
+.lb-larrow-o::after {
+	position:absolute;
+	content:"";
+    margin-top:6.5px;
+    margin-left:4px;
+    width:8px;
+    background-color:transparent !important;
+	border-bottom: 1px solid #3498DB;
+    height:1px;
+}
+
+/*left align littlebox icon*/
+.lb-lalign {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+    height: 15px;
+    width: 20px;
+}
+.lb-lalign::before {
+	position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+    margin-top:3px;
+	height: 12px;
+    width: 12px;
+}
+.lb-lalign::after {
+    position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+    margin-top:-2px;
+	height: 12px;
+    width: 20px;
+}
+
+/*right align littlebox icon*/
+.lb-ralign {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+    height: 15px;
+    width: 20px;
+}
+.lb-ralign::before {
+	position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+    margin-top:3px;
+	height: 12px;
+    width: 12px;
+	margin-left:8px;
+}
+.lb-ralign::after {
+    position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+    margin-top:-2px;
+	height: 12px;
+    width: 20px;
+}
+
+/*center align littlebox icon*/
+.lb-centeralign {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+    height: 15px;
+    width: 20px;
+}
+.lb-centeralign::before {
+	position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+    margin-top:3px;
+	height: 12px;
+    width: 12px;
+	margin-left:4px;
+}
+.lb-centeralign::after {
+    position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+    margin-top:-2px;
+	height: 12px;
+    width: 20px;
+}
+
+/*justify align littlebox icon*/
+.lb-justify {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+    height: 15px;
+    width: 20px;
+}
+.lb-justify::before {
+	position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+    margin-top:3px;
+	height: 12px;
+    width: 20px;
+}
+.lb-justify::after {
+    position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-top:2px solid #3498DB;
+    margin-top:-2px;
+	height: 12px;
+    width: 20px;
+}
+
+/*right arrow circle littlebox icon*/
+.lb-rarrow-o::before {
+	position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-top: 2px solid transparent !important;
+    border-left: 4px solid #3498DB;
+    border-bottom: 2px solid transparent !important;
+    margin-left:8px;
+    margin-top:5px;
+}
+.lb-rarrow-o {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+	margin-bottom:1px;
+    height:18px;
+    border:2px solid #3498DB;
+	background-color:transparent !important;
+    border-radius: 100%;
+}
+.lb-rarrow-o::after {
+	position:absolute;
+	content:"";
+    margin-top:6.5px;
+    margin-left:2px;
+    width:8px;
+    background-color:transparent !important;
+	border-bottom: 1px solid #3498DB;
+    height:1px;
+}
+
+/*comment littlebox icon*/
+.lb-comment {
+	display:inline-block;
+	vertical-align:middle;
+	width: 20px;
+	margin-bottom:6px;
+    height:12px;
+	background-color:transparent !important;
+	border-bottom:12px solid #3498DB;
+}
+.lb-comment::before {
+	position:absolute;
+	content:"";
+	width: 0;
+    height: 0;
+    border-top:5px inset transparent !important;
+    border-left:4px solid #3498DB;
+    border-bottom:5px inset transparent !important;
+    margin-left:12px;
+    margin-top:7px;
+	background-color:transparent !important;
+}
+.lb-comment::after {
+	position:absolute;
+	content:"";
+	width: 14px;
+	border:1.5px solid white !important;
+	border-left: none !important;
+	border-right:none !important;
+	margin-left:3px;
+	margin-top:3px;
+    height:5px;
+	background-color:transparent !important;
+}
+
+/*flag littlebox icon*/
+.lb-flag {
+	display:inline-block;
+	vertical-align:middle;
+	background-color:transparent !important;
+	margin-left:2px;
+	margin-right:10px;
+	margin-top:7px;
+	width:2px;
+	height:16px;
+	border-bottom: 16px solid #3498DB;
+	-ms-transform: rotate(-5deg); /* IE 9 */
+    -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+    transform: rotate(-5deg);
+}
+.lb-flag::before {
+    position:absolute;
+	content:"";
+	width:8px;
+	height:8px;
+	margin-top:-5px;
+	margin-left:4px;
+	background-color:transparent !important;
+	border-bottom: 8px solid #3498DB;
+}
+.lb-flag::after {
+	position:absolute;
+	content:"";
+	width: 8px;
+    height:8px;
+    background-color:transparent !important;
+	border-bottom: 8px solid #3498DB;
+	margin-top:-7px;
+}
+
+/*download littlebox icon*/
+.lb-download{
+	display:inline-block;
+	vertical-align:middle;
+    width: 20px;
+    height:12px;
+    background-color: transparent !important;
+    border: 2px solid #3498DB;
+	border-top:none;
+}
+.lb-download::before {
+	position:absolute;
+	content:"";
+	width: 0;
+    height: 0;
+	margin-top:-2px;
+    border-left: 8px inset transparent !important;
+    border-top: 6px solid #3498DB;
+    border-right: 8px inset transparent !important;
+}
+
+/*home littlebox icon*/
+.lb-home {
+	display:inline-block;
+	vertical-align:middle;
+    width: 16px;
+	margin-top:6px;
+	margin-bottom:1px;
+	margin-left:2px;
+	margin-right:2px;
+    height:12px;
+    background-color: transparent !important;
+    border: 6px solid #3498DB;
+	border-top-width:7px;
+	border-bottom:none;
+}
+.lb-home::before {
+	position:absolute;
+	content:"";
+	width: 0;
+    height: 0;
+    border-left: 10px inset transparent !important;
+    border-bottom: 8px solid #3498DB;
+    border-right: 10px inset transparent !important;
+	margin-top:-14px;
+	margin-left:-8px;
+}
+.lb-home::after {
+	position:absolute;
+	content:"";
+	margin-left:5px;
+	margin-top:-14px;
+	width:3px;
+    height:5px;
+    background-color: transparent !important;
+	border-bottom: 5px solid #3498DB;
+}
+
+/*camera littlebox icon*/
+.lb-camera {
+	display:inline-block;
+	vertical-align:middle;
+    width: 20px;
+    margin-bottom:2px;
+    height:16px;
+    background-color: transparent !important;
+    border: 2px solid #3498DB;
+}
+.lb-camera::before {
+	position:absolute;
+	content:"";
+	width: 6px;
+    height:6px;
+    border:1px double #3498DB;
+	border-left:3px solid #3498DB;
+    border-radius: 100%;
+	margin-left:5px;
+	margin-top:3.5px;
+	-ms-transform: rotate(-35deg); /* IE 9 */
+    -webkit-transform: rotate(-35deg); /* Chrome, Safari, Opera */
+    transform: rotate(-35deg);
+}
+.lb-camera::after {
+	position:absolute;
+	content:"";
+	width: 3px;
+    margin-left:0px;
+    height:2px;
+    background-color:transparent !important;
+	border-bottom: 2px solid #3498DB;
+    margin-top:1px;
+	margin-left:1px;
+}
+
+/*video littlebox icon*/
+.lb-video {
+	display:inline-block;
+	vertical-align:middle;
+	width: 16px;
+	margin-right:4px;
+    height:12px;
+    border-radius: 2px;
+	background-color:transparent !important;
+	border-bottom:12px solid #3498DB;
+}
+.lb-video::before {
+	position:absolute;
+	content:"";
+	width: 0;
+    height: 0;
+    border-top:5px solid transparent !important;
+    border-right:5px solid #3498DB;
+    border-bottom:5px solid transparent !important;
+    margin-left:15px;
+	margin-top:1px;
+	background-color:transparent !important;
+}
+.lb-video::after {
+	position:absolute;
+	content:"";
+	width: 10px;
+    height:8px;
+	margin-top:-3px;
+    border-radius: 0px 2px 0px 0px;;
+	border:2px solid #3498DB;
+	border-left:none;
+	background-color:transparent;
+}
+
+/*email littlebox icon*/
+.lb-email{
+	display:inline-block;
+	vertical-align:middle;
+    width: 20px;
+    margin-bottom: 2px;
+    height:12px;
+    background-color: transparent !important;
+    border: 2px solid #3498DB;
+	border-top:none;
+}
+.lb-email::before {
+	position:absolute;
+	content:"";
+	width: 0;
+    height: 0;
+	margin-left:-2px;
+    border-left: 10px inset transparent !important;
+    border-top: 6px solid #3498DB;
+    border-right: 10px inset transparent !important;
+}
+
+/*user littlebox icon*/
+.lb-user {
+	display:inline-block;
+	vertical-align:top;
+	width:16px;
+	margin-top:13px;
+    height:6px;
+    border-radius: 2px 2px 0px 0px;
+	background-color:transparent !important;
+	border-bottom:6px solid #3498DB;
+}
+.lb-user::before {
+	position:absolute;
+	content:"";
+	width: 4px;
+	margin-left:6px;
+	margin-top:-3px;
+    height:3px;
+	background-color:transparent !important;
+	border-bottom:4px solid #3498DB;
+}
+.lb-user::after {
+	position:absolute;
+	content:"";
+	width: 8px;
+	margin-top:-12px;
+	margin-left:4px;
+    height:10px;
+	border-radius:4px 4px 6px 6px;
+	background-color:transparent !important;
+	border-top:5px solid #3498DB;
+	border-bottom:5px solid #3498DB;
+}
+
+/*clock littlebox icon*/
+.lb-clock {
+	display:inline-block;
+	vertical-align:middle;
+	width: 20px;
+    margin-bottom:1px;
+    height:20px;
+    border:2px solid #3498DB;
+	background-color: transparent !important;
+    border-radius: 100%;
+}
+.lb-clock::before {
+	position:absolute;
+	content:"";
+	margin-left:7px;
+	margin-top:8px;
+	width:5px;
+	height:1px;
+	background-color: transparent !important;
+	border-bottom: 1px solid #3498DB;
+}
+.lb-clock::after {
+	position:absolute;
+	content:"";
+	margin-top:2px;
+	margin-left:7px;
+	width:1px;
+	height:6px;
+	background-color: transparent !important;
+	border-bottom: 6px solid #3498DB;
+}
+
+/*eye littlebox icon*/
+.lb-eye {
+	display:inline-block;
+	vertical-align:middle;
+	width: 15px;
+    margin-bottom:2px;
+	margin-left:2px;
+	margin-right:2px;
+    height:15px;
+    border:2px solid #3498DB;
+	background-color: transparent !important;
+    border-radius: 75% 0px 75% 0px;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+.lb-eye::before {
+	position:absolute;
+	content:"";
+	width: 8px;
+    margin-left:2px;
+    height:8px;
+    border:1.5px solid #3498DB;
+	background-color: transparent !important;
+    border-radius: 100%;
+    margin-top:1px;
+}
+.lb-eye::after {
+	position:absolute;
+	content:"";
+	width: 3px;
+    margin-left:4.5px;
+    height:3px;
+    border:1px solid #3498DB;
+	background-color: transparent !important;
+	border-right-width:0.5px;
+	border-left-width:1.5px;
+    border-radius: 100%;
+    margin-top:2.5px;
+}
+
+/*check littlebox icon*/
+.lb-check {
+	display:inline-block;
+	vertical-align:middle;
+	margin-bottom:3px;
+	margin-left:5px;
+    width: 18px;
+	height:3px;
+	border-radius:3px;
+    -ms-transform: rotate(-60deg); /* IE 9 */
+    -webkit-transform: rotate(-60deg); /* Chrome, Safari, Opera */
+    transform: rotate(-60deg);
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+.lb-check::after {
+	position:absolute;
+	content:"";
+    margin-left:-3px;
+	margin-top:-4px;
+    width: 10px;
+	height:3px;
+	border-radius:3px;
+    -ms-transform: rotate(100deg); /* IE 9 */
+    -webkit-transform: rotate(100deg); /* Chrome, Safari, Opera */
+    transform: rotate(100deg);
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+/*X littlebox icon*/
+.lb-x {
+	display:inline-block;
+	vertical-align:middle;
+	margin-bottom:2px;
+    width: 18px;
+	height:3px;
+	border-radius:3px;
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+.lb-x::after {
+    position:absolute;
+	content:"";
+    width: 18px;
+	height:3px;
+	border-radius:3px;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+
+/*info littlebox icon*/
+.lb-info {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+	border-bottom:12px solid #3498DB;
+    width:3px;
+	height:12px;
+    border-radius: 3px;
+    margin-top:1px;
+}
+.lb-info::after {
+    position:absolute;
+	content:"";
+	margin-top:-5px;
+    height:3px;
+	width:3px;
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+	border-radius:3px;
+}
+
+/*warning littlebox icon*/
+.lb-warning {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+	border-bottom:12px solid #3498DB;
+    width:3px;
+	height:12px;
+    border-radius: 3px;
+    margin-bottom:7px;
+}
+.lb-warning::after {
+    position:absolute;
+	content:"";
+	margin-top:14px;
+    height:3px;
+	width:3px;
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+	border-radius:3px;
+}
+
+/*plus littlebox icon*/
+.lb-plus {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+    border-radius:3px;
+	margin-bottom:2px;
+    width:15px;
+	height:3px;
+}
+.lb-plus::after {
+    position:absolute;
+	content:"";
+    background-color: transparent !important;
+	border-bottom:15px solid #3498DB;
+    border-radius:3px;
+    width:3px;
+	height:15px;
+	margin-left:6px;
+	margin-top:-6px;
+}
+
+/*minus littlebox icon*/
+.lb-minus {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+    border-radius:3px;
+	margin-bottom:2px;
+    width:15px;
+	height:3px;
+}
+
+/*divide littlebox icon*/
+.lb-divide {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+    border-radius:3px;
+	margin-bottom:2px;
+    width:15px;
+	height:3px;
+}
+.lb-divide::before {
+	position:absolute;
+	content:"";
+    margin-left:6px;
+    margin-top:-5px;
+    width:3px;
+	height:3px;
+    border-radius:100%;
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+.lb-divide::after {
+	position:absolute;
+	content:"";
+    margin-left:6px;
+    margin-top:5px;
+    width:3px;
+	height:3px;
+    border-radius:100%;
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+
+/*percent littlebox icon*/
+.lb-percent {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+    border-radius:3px;
+	margin-bottom:2px;
+    width:15px;
+	height:3px;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+.lb-percent::before {
+	position:absolute;
+	content:"";
+    margin-left:6px;
+    margin-top:-5px;
+    width:3px;
+	height:3px;
+    border-radius:100%;
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+.lb-percent::after {
+	position:absolute;
+	content:"";
+    margin-left:6px;
+    margin-top:5px;
+    width:3px;
+	height:3px;
+    border-radius:100%;
+	background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+
+/*no entry littlebox icon*/
+.lb-noentry {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    margin-bottom:2px;
+	margin-top:1px;
+    height:18px;
+    border:2px solid #3498DB;
+    border-radius: 100%;
+    background-color:transparent !important;
+}
+.lb-noentry::after {
+	position:absolute;
+	content:"";
+    margin-top:6px;
+    margin-left:1px;
+    width:12px;
+	height:3px;
+	border-radius:3px;
+    background-color: transparent !important;
+	border-bottom:3px solid #3498DB;
+}
+
+/*like littlebox icon*/
+/*!!! NEEDS WORK !!!*/
+.lb-heart::before {
+	position:absolute;
+	content:"";
+	width:8px;
+    height:7px;
+    border-radius: 100%;
+    margin-top:-12.75px;
+	margin-left:-7px;
+	background-color: transparent !important;
+	border-top:3px solid #3498DB;
+	border-bottom:4px solid #3498DB;
+}
+.lb-heart::after {
+	position:absolute;
+	content:"";
+	width:8px;
+    height:7px;
+    border-radius: 100%;
+	border-bottom:transparent;
+    margin-top:-12.75px;
+	margin-left:-1px;
+    background-color: transparent !important;
+	border-top:3px solid #3498DB;
+	border-bottom:4px solid #3498DB;
+}
+.lb-heart {
+	display:inline-block;
+	vertical-align:middle;
+	width: 0;
+    height: 0;
+    border-left: 7px inset transparent !important;
+    border-top: 8px solid #3498DB;
+    border-right: 7px inset transparent !important;
+	background-color:transparent;
+	margin-top:3px;
+}
+
+/*plus-o littlebox icon*/
+.lb-plus-o {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    margin-bottom:2px;
+	margin-top:1px;
+    height:18px;
+    border:2px solid #3498DB;
+    border-radius: 100%;
+    background-color:transparent !important;
+}
+.lb-plus-o::before {
+	position:absolute;
+	content:"";
+    margin-top:6px;
+    margin-left:2px;
+    width:10px;
+	height:2px;
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+}
+.lb-plus-o::after {
+	position:absolute;
+	content:"";
+	margin-top:2px;
+	margin-left:6px;
+    height:10px;
+	width:2px;
+    background-color: transparent !important;
+	border-bottom:10px solid #3498DB;
+}
+
+/*minues-o littlebox icon*/
+.lb-minus-o {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    margin-bottom:2px;
+	margin-top:1px;
+    height:18px;
+    border:2px solid #3498DB;
+    border-radius: 100%;
+    background-color:transparent !important;
+}
+.lb-minus-o::before {
+	position:absolute;
+	content:"";
+    margin-top:6px;
+    margin-left:2px;
+    width:10px;
+	height:2px;
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+}
+
+/*times-o littlebox icon*/
+.lb-times-o {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    margin-bottom:2px;
+	margin-top:1px;
+    height:18px;
+    border:2px solid #3498DB;
+    border-radius: 100%;
+    background-color:transparent !important;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+.lb-times-o::before {
+	position:absolute;
+	content:"";
+    margin-top:6px;
+    margin-left:2px;
+    width:10px;
+	height:2px;
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+}
+.lb-times-o::after {
+	position:absolute;
+	content:"";
+	margin-top:2px;
+	margin-left:6px;
+    height:10px;
+	width:2px;
+    background-color: transparent !important;
+	border-bottom:10px solid #3498DB;
+}
+
+/*check-o littlebox icon*/
+.lb-check-o {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    margin-bottom:2px;
+	margin-top:1px;
+    height:18px;
+    border:2px solid #3498DB;
+    border-radius: 100%;
+    background-color:transparent !important;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+.lb-check-o::before {
+	position:absolute;
+	content:"";
+    margin-top:4px;
+    margin-left:3px;
+    width:9px;
+	height:5px;
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+	border-left:2px solid #3498DB;
+}
+
+/*denied littlebox icon*/
+.lb-denied {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    margin-bottom:2px;
+	margin-top:1px;
+    height:18px;
+    border:2px solid #3498DB;
+    border-radius: 100%;
+    background-color:transparent !important;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+.lb-denied::before {
+	position:absolute;
+	content:"";
+    margin-top:6px;
+	margin-left:-1px;
+    width:16px;
+	height:2px;
+    background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+}
+
+/*alert littlebox icon*/
+.lb-alert::after {
+	position:absolute;
+	content:"";
+    width: 0;
+    height: 0;
+    border-left: 10px inset transparent !important;
+    border-bottom: 16px solid #3498DB;
+    border-right: 10px inset transparent !important;
+	opacity:0.3;
+	margin-left:-9px;
+	margin-top:-5px;
+}
+.lb-alert {
+	display:inline-block;
+	vertical-align:middle;
+    background-color: transparent !important;
+	border-bottom:6px solid #3498DB;
+    width:2px;
+	height:6px;
+	margin-top:-3px;
+}
+.lb-alert::before {
+    position:absolute;
+	content:"";
+	margin-top:7px;
+    height:2px;
+	width:2px;
+	background-color: transparent !important;
+	border-bottom:2px solid #3498DB;
+}
+
+/*adjust littlebox icon*/
+.lb-adjust {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    margin-bottom:2px;
+	margin-top:1px;
+    height:18px;
+    border:2px solid #3498DB;
+	border-right:9px solid #3498DB;
+    border-radius: 100%;
+    background-color:transparent !important;
+}
+
+/*archive littlebox icon*/
+.lb-archive {
+	display:inline-block;
+	vertical-align:middle;
+    width: 15px;
+    margin-bottom:1px;
+	margin-top:2px;
+    height:10px;
+    border-bottom:8px solid #3498DB;
+	border-top:1px solid #3498DB;
+	border-left:6px solid #3498DB;
+	border-right:6px solid #3498DB;
+    background-color:transparent !important;
+}
+.lb-archive::before {
+	position:absolute;
+	content:"";
+	width: 17px;
+	height: 3px;
+	margin-left:-7px;
+	margin-top:-5px;
+	border-bottom:3px solid #3498DB;
+}
+
+/*asterisk littlebox icon*/
+.lb-asterisk {
+	display:inline-block;
+	vertical-align:middle;
+    height:10px;
+	width:2px;
+    background-color: transparent !important;
+	border-bottom:10px solid #3498DB;
+}
+.lb-asterisk::before {
+	position:absolute;
+	content:"";
+    height:10px;
+	width:2px;
+    background-color: transparent !important;
+	border-bottom:10px solid #3498DB;
+	-ms-transform: rotate(60deg); /* IE 9 */
+    -webkit-transform: rotate(60deg); /* Chrome, Safari, Opera */
+    transform: rotate(60deg);
+}
+.lb-asterisk::after {
+	position:absolute;
+	content:"";
+    height:10px;
+	width:2px;
+    background-color: transparent !important;
+	border-bottom:10px solid #3498DB;
+	-ms-transform: rotate(120deg); /* IE 9 */
+    -webkit-transform: rotate(120deg); /* Chrome, Safari, Opera */
+    transform: rotate(120deg);
+}
+
+/*visa littlebox icon*/
+.lb-visa {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height:12px;
+    background-color: transparent !important;
+	border:3px solid #3498DB;
+	border-left: none !important;
+	border-right: none !important;
+	border-top-color: rgba(43,61,206,1.00) !important;
+	border-bottom-color: rgba(243,199,46,1.00) !important;
+	border-radius:1px;
+}
+.lb-visa::before {
+	position:absolute;
+	content:"";
+    margin-top:2px;
+    margin-left:3px;
+    width:12px;
+	height:2px;
+    background-color: transparent !important;
+	border-bottom:2px solid rgba(43,61,206,1.00) !important;
+}
+.lb-visa::after {
+	position:absolute;
+	content:"";
+    margin-top:2px;
+    margin-left:3px;
+    width:3px;
+	height:1px;
+    background-color: transparent !important;
+	border-bottom:2px solid rgba(243,199,46,1.00) !important;
+}
+
+/*mastercard littlebox icon*/
+.lb-mastercard {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height:12px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(61,83,213,1.00);
+	border-radius:1px;
+}
+.lb-mastercard::before {
+	position:absolute;
+	content:"";
+    margin-top:3px;
+    margin-left:4px;
+    width:6px;
+	height:6px;
+    background-color: transparent !important;
+	border-top:3px solid rgba(227,54,54,1.00) !important;
+	border-bottom:3px solid rgba(227,54,54,1.00) !important;
+	border-radius:100%;
+}
+.lb-mastercard::after {
+	position:absolute;
+	content:"";
+    margin-top:3px;
+    margin-left:9px;
+    width:6px;
+	height:6px;
+    background-color: transparent !important;
+	border-top:3px solid rgba(230,191,45,1.00) !important;
+	border-bottom:3px solid rgba(230,191,45,1.00) !important;
+	border-radius:100%;
+}
+
+/*amex littlebox icon*/
+.lb-amex {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height:12px;
+    background-color: transparent !important;
+	border: 5px solid rgba(36,206,244,1.00) !important;
+	border-bottom-width:5px;
+	border-top-width:5px;
+	border-left-width:2px;
+	border-right-width:2px;
+	border-radius:1px;
+}
+
+/*discover littlebox icon*/
+.lb-discover {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height:12px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(249,161,9,1.00) !important;
+	border-radius:1px;
+}
+.lb-discover::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height:12px;
+    background-color: transparent !important;
+	border-bottom:12px solid #000000 !important;
+	border-radius:1px 1px 11px 1px;
+}
+.lb-discover::after {
+	position:absolute;
+	content:"";
+    margin-top:4px;
+    margin-left:4px;
+    width:10px;
+	height:2px;
+    background-color: transparent !important;
+	border-bottom:2px solid #FFFFFF !important;
+}
+
+/*credit card littlebox icon*/
+.lb-creditcard::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height:12px;
+    background-color: transparent !important;
+	border-bottom: 7px solid #3498DB;
+	border-top: 2px solid #3498DB;
+	border-radius:1px;
+	opacity:0.5;
+	margin-top:-8px;
+	margin-left:-7px;
+}
+.lb-creditcard {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height:2px;
+	margin-top:3px;
+	margin-left:-5px;
+    background-color: transparent !important;
+	border-left:4px solid #3498DB !important;
+	border-right:3px solid #3498DB !important;
+}
+
+/*usdollar littlebox icon*/
+.lb-usdollar {
+	display:inline-block;
+	vertical-align:middle;
+	height:14px;
+	width:2px;
+	border-bottom:3px solid black;
+	border-top:3px solid black;
+	margin-top:-2px;
+}
+.lb-usdollar::before {
+	position:absolute;
+	content:"S";
+	font-family:sans-serif;
+	margin-top:-3px;
+	margin-left:-3px;
+	font-weight:bold;
+	color:black;
+	font-size:12px;
+}
+
+/*euro littlebox icon*/
+.lb-euro {
+	display:inline-block;
+	vertical-align:middle;
+	height:3px;
+	width:5px;
+	border-bottom:1px solid black;
+	border-top:1px solid black;
+	margin-top:-3px;
+	margin-left:-3px;
+}
+.lb-euro::before {
+	position:absolute;
+	content:"";
+	height:11px;
+	width:8px;
+	border-radius:100%;
+	border:2px solid black;
+	border-right:2px solid transparent;
+	margin-top:-5px;
+	margin-left:1px;
+}
+
+/*bitcoin littlebox icon*/
+.lb-bitcoin {
+	display:inline-block;
+	vertical-align:middle;
+	height:3px;
+	width:3px;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	margin-top:-13px;
+}
+.lb-bitcoin::before {
+	position:absolute;
+	content:"B";
+	font-family:sans-serif;
+	margin-top:0px;
+	margin-left:-3px;
+	font-weight:bold;
+	color:black;
+	font-size:12px;
+}
+.lb-bitcoin::after {
+	position:absolute;
+	content:"";
+	vertical-align:middle;
+	height:3px;
+	width:3px;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	margin-top:11px;
+	margin-left:-1px;
+}
+
+/*pound littlebox icon*/
+.lb-pound {
+	display:inline-block;
+	vertical-align:middle;
+	height:2px;
+	width:5px;
+	border-bottom:2px solid black;
+	margin-top:0px;
+	margin-left:-2px;
+}
+.lb-pound::before {
+	position:absolute;
+	content:"";
+	height:11px;
+	width:7px;
+	border-radius:100% 100% 0px 0px;
+	border:2px solid black;
+	border-right:2px solid transparent;
+	border-bottom:2px solid transparent;
+	margin-top:-5px;
+	margin-left:1px;
+}
+.lb-pound::after {
+	position:absolute;
+	content:"";
+	height:3px;
+	width:7px;
+	border-bottom:2px solid black;
+	border-right:2px solid black;
+	margin-top:3px;
+	margin-left:0px;
+}
+
+/*yen littlebox icon*/
+.lb-yen {
+	display:inline-block;
+	vertical-align:middle;
+	height:3px;
+	width:8px;
+	border-bottom:1px solid black;
+	border-top:1px solid black;
+	margin-top:-2px;
+}
+.lb-yen::before {
+	position:absolute;
+	content:"Y";
+	font-family:sans-serif;
+	margin-top:-7px;
+	font-weight:bold;
+	color:black;
+	font-size:13px;
+}
+
+/*flag-us littlebox icon*/
+.lb-flag-us {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 5px;
+	margin-left:-10px;
+	margin-top:-9px;
+    background-color: transparent !important;
+	border-bottom: 5px solid blue !important;
+}
+.lb-flag-us::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 5px;
+	margin-left:8px;
+    background-color: rgba(238,238,238,1.00) !important;
+	border-top: 3px double red !important;
+	border-bottom:1px solid red !important;
+}
+.lb-flag-us::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 7px;
+	margin-top:5px;
+    background-color: red !important;
+	border-top: 3px double rgba(238,238,238,1.00) !important;
+	border-bottom: 3px double rgba(238,238,238,1.00) !important;
+}
+
+/*flag-canada littlebox icon*/
+.lb-flag-canada {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: red !important;
+	border-top: 4px solid rgba(238,238,238,1.00) !important;
+	border-left: 3px solid rgba(238,238,238,1.00) !important;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+	border-right: 3px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-canada::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-canada::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-france littlebox icon*/
+.lb-flag-france {
+	display:inline-block;
+	vertical-align:middle;
+  width: 6px;
+  height: 12px;
+	margin-top:-2px;
+  border-bottom:12px solid rgba(238,238,238,1.00);
+}
+.lb-flag-france::after {
+	position:absolute;
+	content:"";
+  width: 6px;
+  height: 12px;
+	margin-left:-6px;
+  border-bottom: 12px solid blue !important;
+}
+.lb-flag-france::before {
+	position:absolute;
+	content:"";
+  width: 6px;
+  height: 12px;
+	margin-left:6px;
+  border-bottom: 12px solid red !important;
+}
+
+/*flag-germany littlebox icon*/
+.lb-flag-germany {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid red;
+}
+.lb-flag-germany::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid black !important;
+}
+.lb-flag-germany::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid yellow !important;
+}
+
+/*flag-mexico littlebox icon*/
+.lb-flag-mexico {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-mexico::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-mexico::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-argentina littlebox icon*/
+.lb-flag-argentina {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:gold;
+}
+.lb-flag-argentina::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(116,194,239,1.00) !important;
+}
+.lb-flag-argentina::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(116,194,239,1.00) !important;
+}
+
+/*flag-us littlebox icon*/
+.lb-flag-england {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-england::after {
+	position:absolute;
+	content:"";
+    width: 2px;
+    height: 12px;
+	margin-left:8px;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-england::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:5px;
+	border-bottom: 2px solid red !important;
+}
+
+/*flag-afghanistan littlebox icon*/
+.lb-flag-afghanistan {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: rgba(238,238,238,1.00) !important;
+	border-top: 4px solid red !important;
+	border-left: 3px solid red !important;
+	border-bottom: 4px solid red !important;
+	border-right: 3px solid red !important;
+}
+.lb-flag-afghanistan::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid black !important;
+}
+.lb-flag-afghanistan::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid green !important;
+}
+
+/*flag-algeria littlebox icon*/
+.lb-flag-algeria {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-algeria::after {
+	position:absolute;
+	content:"";
+    width: 9px;
+    height: 12px;
+	border-bottom: 4px solid green !important;
+	border-top: 4px solid green !important;
+	border-left: 6px solid green !important;
+}
+.lb-flag-algeria::before {
+	position:absolute;
+	content:"";
+    width: 9px;
+    height: 12px;
+	margin-left:9px;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+	border-top: 4px solid rgba(238,238,238,1.00) !important;
+	border-right: 6px solid rgba(238,238,238,1.00) !important;
+}
+
+/*flag-armenia littlebox icon*/
+.lb-flag-armenia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid red;
+}
+.lb-flag-armenia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid blue !important;
+}
+.lb-flag-armenia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid gold !important;
+}
+
+/*flag-austria littlebox icon*/
+.lb-flag-austria {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid rgba(238,238,238,1.00);
+}
+.lb-flag-austria::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-austria::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-azerbaijan littlebox icon*/
+.lb-flag-azerbaijan {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid red;
+	border-top:1px solid red;
+	border-left:8px solid red;
+	border-right:8px solid red;
+	background-color:white;
+}
+.lb-flag-azerbaijan::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(116,194,239,1.00) !important;
+}
+.lb-flag-azerbaijan::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-barbados littlebox icon*/
+.lb-flag-barbados {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: black !important;
+	border-top: 4px solid gold !important;
+	border-left: 3px solid gold !important;
+	border-bottom: 4px solid gold !important;
+	border-right: 3px solid gold !important;
+}
+.lb-flag-barbados::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid blue !important;
+}
+.lb-flag-barbados::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid blue !important;
+}
+
+/*flag-bangladesh littlebox icon*/
+.lb-flag-bangladesh {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-bangladesh::after {
+	position:absolute;
+	content:"";
+    width: 9px;
+    height: 12px;
+	border-bottom: 4px solid green !important;
+	border-top: 4px solid green !important;
+	border-left: 4px solid green !important;
+}
+.lb-flag-bangladesh::before {
+	position:absolute;
+	content:"";
+    width: 9px;
+    height: 12px;
+	margin-left:9px;
+	border-bottom: 4px solid green !important;
+	border-top: 4px solid green !important;
+	border-right: 8px solid green !important;
+}
+
+/*flag-bahrain littlebox icon*/
+.lb-flag-bahrain {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: transparent !important;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-bahrain::after {
+	position:absolute;
+	content:"";
+    width: 4px;
+    height: 12px;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-bahrain::before {
+	position:absolute;
+	content:"";
+    width: 14px;
+    height: 12px;
+	margin-left:4px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-belgium littlebox icon*/
+.lb-flag-belgium {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid yellow !important;
+}
+.lb-flag-belgium::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid black !important;
+}
+.lb-flag-belgium::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-benin littlebox icon*/
+.lb-flag-benin {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-left:-10px;
+	margin-top:-2px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-benin::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-left:8px;
+	border-bottom:6px solid yellow !important;
+}
+.lb-flag-benin::before {
+	position:absolute;
+	content:"";
+	margin-top:6px;
+    width: 10px;
+    height: 6px;
+	margin-left:8px;
+	border-bottom:6px solid red !important;
+}
+
+/*flag-belarus littlebox icon*/
+.lb-flag-belarus {
+	display:inline-block;
+	vertical-align:middle;
+    width: 3px;
+    height: 12px;
+	margin-left:-16px;
+	margin-top:-2px;
+	background-color: red;
+	border-left: 3px double rgba(238,238,238,1.00) !important;
+}
+.lb-flag-belarus::after {
+	position:absolute;
+	content:"";
+    width: 15px;
+    height: 9px;
+	margin-left:0px;
+	border-bottom:9px solid red !important;
+}
+.lb-flag-belarus::before {
+	position:absolute;
+	content:"";
+	margin-top:6px;
+    width: 15px;
+    height: 6px;
+	margin-left:0px;
+	border-bottom:3px solid green !important;
+}
+
+/*flag-belize littlebox icon*/
+.lb-flag-belize {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 8px;
+	margin-top:-2px;
+    border-bottom:1px solid blue;
+	border-top:1px solid blue;
+	border-left:6px solid blue;
+	border-right:6px solid blue;
+	background-color:rgba(238,238,238,1.00);
+}
+.lb-flag-belize::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:-3px;
+	margin-left:-6px;
+	border-bottom: 2px solid red !important;
+}
+.lb-flag-belize::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:7px;
+	margin-left:-6px;
+	border-bottom: 2px solid red !important;
+}
+
+/*flag-bolivia littlebox icon*/
+.lb-flag-bolivia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid gold;
+	border-top:1px solid gold;
+	border-left:8px solid gold;
+	border-right:8px solid gold;
+	background-color:red;
+}
+.lb-flag-bolivia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-bolivia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-botswana littlebox icon*/
+.lb-flag-botswana {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(59,215,227,1.00) !important;
+}
+.lb-flag-botswana::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:5px;
+	border-bottom: 2px solid black !important;
+}
+
+/*flag-bangladesh littlebox icon*/
+.lb-flag-brazil {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: transparent !important;
+	border-top: 4px solid rgba(74,196,79,1.00) !important;
+	border-bottom: 4px solid rgba(74,196,79,1.00) !important;
+	border-left: 6px solid rgba(74,196,79,1.00) !important;
+	border-right: 6px solid rgba(74,196,79,1.00) !important;
+}
+.lb-flag-brazil::after {
+	position:absolute;
+	content:"";
+    width: 8px;
+    height: 8px;
+	margin-top:-2px;
+	margin-left:-1px;
+	border-bottom: 2px solid yellow !important;
+	border-top: 2px solid yellow !important;
+	border-left: 2px solid yellow !important;
+	border-right: 2px solid yellow !important;
+	background-color:blue !important;
+}
+
+/*flag-bulgaria littlebox icon*/
+.lb-flag-bulgaria {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid green;
+}
+.lb-flag-bulgaria::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-bulgaria::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-burkinafaso littlebox icon*/
+.lb-flag-burkinafaso {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid gold !important;
+}
+.lb-flag-burkinafaso::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-right: 6px solid red !important;
+	border-top: 4px solid red !important;
+	border-left: 6px solid red !important;
+}
+.lb-flag-burkinafaso::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-right: 6px solid green !important;
+	border-bottom: 4px solid green !important;
+	border-left: 6px solid green !important;
+}
+
+/*flag-cameroon littlebox icon*/
+.lb-flag-cameroon {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: yellow !important;
+	border-top: 4px solid red !important;
+	border-left: 3px solid red !important;
+	border-bottom: 4px solid red !important;
+	border-right: 3px solid red !important;
+}
+.lb-flag-cameroon::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-cameroon::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid yellow !important;
+}
+
+/*flag-chad littlebox icon*/
+.lb-flag-chad {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid yellow !important;
+}
+.lb-flag-chad::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid blue !important;
+}
+.lb-flag-chad::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-chile littlebox icon*/
+.lb-flag-chile {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 6px;
+	margin-left:-10px;
+	margin-top:-8px;
+    background-color: rgba(238,238,238,1.00) !important;
+	border-bottom: 2px solid blue !important;
+	border-top: 2px solid blue !important;
+	border-left: 2px solid blue !important;
+	border-right: 2px solid blue !important;
+}
+.lb-flag-chile::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-left:6px;
+	margin-top:-2px;
+	border-bottom:6px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-chile::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:4px;
+	margin-left:-2px;
+	border-bottom:6px solid red !important;;
+}
+
+/*flag-china littlebox icon*/
+.lb-flag-china {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 6px;
+	margin-left:-10px;
+	margin-top:-8px;
+    background-color: gold !important;
+	border-bottom: 2px solid red !important;
+	border-top: 2px solid red !important;
+	border-left: 2px solid red !important;
+	border-right: 2px solid red !important;
+}
+.lb-flag-china::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-left:6px;
+	margin-top:-2px;
+	border-bottom:6px solid red !important;
+}
+.lb-flag-china::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:4px;
+	margin-left:-2px;
+	border-bottom:6px solid red !important;;
+}
+
+/*flag-colombia littlebox icon*/
+.lb-flag-colombia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid blue;
+}
+.lb-flag-colombia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid yellow !important;
+}
+.lb-flag-colombia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-ivorycoast littlebox icon*/
+.lb-flag-ivorycoast {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid rgba(238,238,238,1.00);
+}
+.lb-flag-ivorycoast::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid orange !important;
+}
+.lb-flag-ivorycoast::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid green !important;
+}
+
+/*flag-croatia littlebox icon*/
+.lb-flag-croatia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:red;
+}
+.lb-flag-croatia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-croatia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid blue !important;
+}
+
+/*flag-cyprus littlebox icon*/
+.lb-flag-cyprus {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: transparent !important;
+	border-top: 4px solid rgba(238,238,238,1.00) !important;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+	border-left: 6px solid rgba(238,238,238,1.00) !important;
+	border-right: 8px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-cyprus::after {
+	position:absolute;
+	content:"";
+    width: 4px;
+    height: 4px;
+	border-bottom: 1px solid green !important;
+	border-top: 3px solid gold !important;
+	background-color:gold !important;
+}
+
+/*flag-denmark littlebox icon*/
+.lb-flag-denmark {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-denmark::after {
+	position:absolute;
+	content:"";
+    width: 2px;
+    height: 12px;
+	margin-left:4px;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-denmark::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:5px;
+	border-bottom: 2px solid rgba(238,238,238,1.00) !important;
+}
+
+/*flag-ecuador littlebox icon*/
+.lb-flag-ecuador {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid blue;
+	border-top:1px solid blue;
+	border-left:8px solid blue;
+	border-right:8px solid blue;
+	background-color:yellow;
+}
+.lb-flag-ecuador::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid yellow !important;
+}
+.lb-flag-ecuador::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-egypt littlebox icon*/
+.lb-flag-egypt {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:gold;
+}
+.lb-flag-egypt::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(164,59,60,1.00) !important;
+}
+.lb-flag-egypt::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid black !important;
+}
+
+/*flag-elsalvador littlebox icon*/
+.lb-flag-elsalvador {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:green;
+}
+.lb-flag-elsalvador::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(51,129,210,1.00) !important;
+}
+.lb-flag-elsalvador::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(51,129,210,1.00) !important;
+}
+
+/*flag-estonia littlebox icon*/
+.lb-flag-estonia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid black;
+}
+.lb-flag-estonia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid blue !important;
+}
+.lb-flag-estonia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+}
+
+/*flag-ethiopia littlebox icon*/
+.lb-flag-ethiopia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid gold;
+	border-top:1px solid gold;
+	border-left:8px solid gold;
+	border-right:8px solid gold;
+	background-color:rgba(51,129,210,1.00);
+}
+.lb-flag-ethiopia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+.lb-flag-ethiopia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-finland littlebox icon*/
+.lb-flag-finland {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-finland::after {
+	position:absolute;
+	content:"";
+    width: 2px;
+    height: 12px;
+	margin-left:4px;
+	border-bottom: 12px solid rgba(51,129,210,1.00) !important;
+}
+.lb-flag-finland::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:5px;
+	border-bottom: 2px solid rgba(51,129,210,1.00) !important;
+}
+
+/*flag-gabon littlebox icon*/
+.lb-flag-gabon {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid yellow;
+}
+.lb-flag-gabon::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid green !important;
+}
+.lb-flag-gabon::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid blue !important;
+}
+
+/*flag-gambia littlebox icon*/
+.lb-flag-gambia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+	border-top:1px solid rgba(238,238,238,1.00) !important;
+    border-bottom:1px solid rgba(238,238,238,1.00) !important;
+	background-color:blue !important;
+}
+.lb-flag-gambia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-gambia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-ghana littlebox icon*/
+.lb-flag-ghana {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid gold;
+	border-top:1px solid gold;
+	border-left:8px solid gold;
+	border-right:8px solid gold;
+	background-color:black;
+}
+.lb-flag-ghana::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-ghana::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-guatemala littlebox icon*/
+.lb-flag-guatemala {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: green !important;
+	border-top: 4px solid rgba(238,238,238,1.00) !important;
+	border-left: 3px solid rgba(238,238,238,1.00) !important;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+	border-right: 3px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-guatemala::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid rgba(116,194,239,1.00) !important;
+}
+.lb-flag-guatemala::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid rgba(116,194,239,1.00) !important;
+}
+
+/*flag-guinea littlebox icon*/
+.lb-flag-guinea {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid gold !important;
+}
+.lb-flag-guinea::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-guinea::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid green !important;
+}
+
+/*flag-guineabissau littlebox icon*/
+.lb-flag-guineabissau {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-left:-10px;
+	margin-top:-3px;
+    background-color: black !important;
+	border-bottom: 4px solid red !important;
+	border-top: 4px solid red !important;
+	border-left: 2px solid red !important;
+	border-right: 2px solid red !important;
+}
+.lb-flag-guineabissau::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-left:6px;
+	margin-top:-4px;
+	border-bottom:6px solid gold !important;
+}
+.lb-flag-guineabissau::before {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-top:2px;
+	margin-left:6px;
+	border-bottom:6px solid green !important;;
+}
+
+/*flag-haiti littlebox icon*/
+.lb-flag-haiti {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-left:0px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-haiti::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-right: 6px solid blue !important;
+	border-top: 4px solid blue !important;
+	border-left: 6px solid blue !important;
+}
+.lb-flag-haiti::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-right: 6px solid red !important;
+	border-bottom: 4px solid red !important;
+	border-left: 6px solid red !important;
+}
+
+/*flag-honduras littlebox icon*/
+.lb-flag-honduras {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:green;
+}
+.lb-flag-honduras::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(51,129,210,1.00) !important;
+}
+.lb-flag-honduras::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(51,129,210,1.00) !important;
+}
+
+/*flag-hongkong littlebox icon*/
+.lb-flag-hongkong {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-hongkong::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-right: 6px solid red !important;
+	border-top: 4px solid red !important;
+	border-left: 6px solid red !important;
+}
+.lb-flag-hongkong::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-right: 6px solid red !important;
+	border-bottom: 4px solid red !important;
+	border-left: 6px solid red !important;
+}
+
+/*flag-hungary littlebox icon*/
+.lb-flag-hungary {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-hungary::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-hungary::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-iceland littlebox icon*/
+.lb-flag-iceland {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid blue !important;
+}
+.lb-flag-iceland::after {
+	position:absolute;
+	content:"";
+    width: 2px;
+    height: 12px;
+	margin-left:4px;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-iceland::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:5px;
+	border-bottom: 2px solid red !important;
+}
+
+/*flag-india littlebox icon*/
+.lb-flag-india {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:green;
+}
+.lb-flag-india::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid orange !important;
+}
+.lb-flag-india::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-indonesia littlebox icon*/
+.lb-flag-indonesia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-indonesia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-bottom: 6px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-indonesia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-bottom: 6px solid red !important;
+}
+
+/*flag-iran littlebox icon*/
+.lb-flag-iran {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:red;
+}
+.lb-flag-iran::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+.lb-flag-iran::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-iraq littlebox icon*/
+.lb-flag-iraq {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:6px solid rgba(238,238,238,1.00);
+	border-right:6px solid rgba(238,238,238,1.00);
+	background-color:green;
+}
+.lb-flag-iraq::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-6px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-iraq::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-6px;
+	border-bottom: 4px solid black !important;
+}
+
+/*flag-ireland littlebox icon*/
+.lb-flag-ireland {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid rgba(238,238,238,1.00);
+}
+.lb-flag-ireland::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-ireland::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid orange !important;
+}
+
+/*flag-israel littlebox icon*/
+.lb-flag-israel {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 8px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:6px solid rgba(238,238,238,1.00);
+	border-right:6px solid rgba(238,238,238,1.00);
+	background-color:rgba(116,194,239,1.00);
+}
+.lb-flag-israel::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:-3px;
+	margin-left:-6px;
+	border-top: 1px solid rgba(238,238,238,1.00) !important;
+	border-bottom: 1px solid rgba(116,194,239,1.00) !important;
+}
+.lb-flag-israel::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:7px;
+	margin-left:-6px;
+	border-bottom: 1px solid rgba(238,238,238,1.00) !important;
+	border-top: 1px solid rgba(116,194,239,1.00) !important;
+}
+
+/*flag-italy littlebox icon*/
+.lb-flag-italy {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid rgba(238,238,238,1.00);
+}
+.lb-flag-italy::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-italy::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-japan littlebox icon*/
+.lb-flag-japan {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-japan::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-right: 6px solid rgba(238,238,238,1.00) !important;
+	border-top: 4px solid rgba(238,238,238,1.00) !important;
+	border-left: 6px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-japan::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-right: 6px solid rgba(238,238,238,1.00) !important;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+	border-left: 6px solid rgba(238,238,238,1.00) !important;
+}
+
+/*flag-nkorea littlebox icon*/
+.lb-flag-nkorea {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 8px;
+	margin-top:-2px;
+    border-bottom:1px solid red;
+	border-top:1px solid red;
+	border-left:3px solid red;
+	border-right:9px solid red;
+	background-color:rgba(238,238,238,1.00);
+}
+.lb-flag-nkorea::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:-3px;
+	margin-left:-3px;
+	border-top: 1px solid blue !important;
+	border-bottom: 1px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-nkorea::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:7px;
+	margin-left:-3px;
+	border-bottom: 1px solid blue !important;
+	border-top: 1px solid rgba(238,238,238,1.00) !important;
+}
+
+/*flag-laos littlebox icon*/
+.lb-flag-laos {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 8px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(38,60,152,1.00);
+	border-top:1px solid rgba(38,60,152,1.00);
+	border-left:6px solid rgba(38,60,152,1.00);
+	border-right:6px solid rgba(38,60,152,1.00);
+	background-color:rgba(238,238,238,1.00);
+}
+.lb-flag-laos::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:-3px;
+	margin-left:-6px;
+	border-bottom: 2px solid rgba(159,57,59,1.00) !important;
+}
+.lb-flag-laos::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:7px;
+	margin-left:-6px;
+	border-bottom: 2px solid rgba(159,57,59,1.00) !important;
+}
+
+/*flag-lebanon littlebox icon*/
+.lb-flag-lebanon {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:green;
+}
+.lb-flag-lebanon::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-lebanon::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-lesotho littlebox icon*/
+.lb-flag-lesotho {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:black;
+}
+.lb-flag-lesotho::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid blue !important;
+}
+.lb-flag-lesotho::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-libya littlebox icon*/
+.lb-flag-libya {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid black;
+	border-top:1px solid black;
+	border-left:8px solid black;
+	border-right:8px solid black;
+	background-color:rgba(238,238,238,1.00);
+}
+.lb-flag-libya::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-libya::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-liechtenstein littlebox icon*/
+.lb-flag-liechtenstein {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 6px;
+	margin-left:-10px;
+	margin-top:-8px;
+    background-color: gold !important;
+	border-bottom: 2px solid blue !important;
+	border-top: 2px solid blue !important;
+	border-left: 2px solid blue !important;
+	border-right: 2px solid blue !important;
+}
+.lb-flag-liechtenstein::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-left:6px;
+	margin-top:-2px;
+	border-bottom:6px solid blue !important;
+}
+.lb-flag-liechtenstein::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:4px;
+	margin-left:-2px;
+	border-bottom:6px solid rgba(150,43,45,1.00) !important;;
+}
+
+/*flag-lithuania littlebox icon*/
+.lb-flag-lithuania {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid green !important;
+}
+.lb-flag-lithuania::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid yellow !important;
+}
+.lb-flag-lithuania::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-luxemborg littlebox icon*/
+.lb-flag-luxemborg {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-luxemborg::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-luxemborg::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid rgba(116,194,239,1.00) !important;
+}
+
+/*flag-macau littlebox icon*/
+.lb-flag-macau {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-macau::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-right: 6px solid green !important;
+	border-top: 4px solid green !important;
+	border-left: 6px solid green !important;
+}
+.lb-flag-macau::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-right: 6px solid green !important;
+	border-bottom: 4px solid green !important;
+	border-left: 6px solid green !important;
+}
+
+/*flag-madagascar littlebox icon*/
+.lb-flag-madagascar {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-left:-10px;
+	margin-top:-2px;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-madagascar::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-left:8px;
+	border-bottom:6px solid red !important;
+}
+.lb-flag-madagascar::before {
+	position:absolute;
+	content:"";
+	margin-top:6px;
+    width: 10px;
+    height: 6px;
+	margin-left:8px;
+	border-bottom:6px solid green !important;
+}
+
+/*flag-mali littlebox icon*/
+.lb-flag-mali {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid gold !important;
+}
+.lb-flag-mali::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-mali::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-mexico littlebox icon*/
+.lb-flag-mexico {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: brown !important;
+	border-top: 4px solid rgba(238,238,238,1.00) !important;
+	border-left: 3px solid rgba(238,238,238,1.00) !important;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+	border-right: 3px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-mexico::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-mexico::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-moldova littlebox icon*/
+.lb-flag-moldova {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: brown !important;
+	border-top: 4px solid gold !important;
+	border-left: 3px solid gold !important;
+	border-bottom: 4px solid gold !important;
+	border-right: 3px solid gold !important;
+}
+.lb-flag-moldova::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid blue !important;
+}
+.lb-flag-moldova::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-monaco littlebox icon*/
+.lb-flag-monaco {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-monaco::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-bottom: 6px solid rgba(168,61,63,1.00) !important;
+}
+.lb-flag-monaco::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-bottom: 6px solid rgba(238,238,238,1.00) !important;
+}
+
+/*flag-morocco littlebox icon*/
+.lb-flag-morocco {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-morocco::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-right: 6px solid red !important;
+	border-top: 4px solid red !important;
+	border-left: 6px solid red !important;
+}
+.lb-flag-morocco::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-right: 6px solid red !important;
+	border-bottom: 4px solid red !important;
+	border-left: 6px solid red !important;
+}
+
+/*flag-holland littlebox icon*/
+.lb-flag-holland {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-holland::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-holland::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid blue !important;
+}
+
+/*flag-nicaragua littlebox icon*/
+.lb-flag-nicaragua {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:green;
+}
+.lb-flag-nicaragua::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(65,87,159,1.00) !important;
+}
+.lb-flag-nicaragua::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid rgba(65,87,159,1.00) !important;
+}
+
+/*flag-niger littlebox icon*/
+.lb-flag-niger {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:orange;
+}
+.lb-flag-niger::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid orange !important;
+}
+.lb-flag-niger::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-nigeria littlebox icon*/
+.lb-flag-nigeria {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-nigeria::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-nigeria::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid green !important;
+}
+
+/*flag-norway littlebox icon*/
+.lb-flag-norway {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-norway::after {
+	position:absolute;
+	content:"";
+    width: 2px;
+    height: 12px;
+	margin-left:4px;
+	border-bottom: 12px solid blue !important;
+}
+.lb-flag-norway::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:5px;
+	border-bottom: 2px solid blue !important;
+}
+
+/*flag-paraguay littlebox icon*/
+.lb-flag-paraguay {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:red;
+}
+.lb-flag-paraguay::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-paraguay::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid blue !important;
+}
+
+/*flag-peru littlebox icon*/
+.lb-flag-peru {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: green !important;
+	border-top: 4px solid rgba(238,238,238,1.00) !important;
+	border-left: 3px solid rgba(238,238,238,1.00) !important;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+	border-right: 3px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-peru::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-peru::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-poland littlebox icon*/
+.lb-flag-poland {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-poland::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:0px;
+	border-bottom: 6px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-poland::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:6px;
+	border-bottom: 6px solid red !important;
+}
+
+/*flag-portugal littlebox icon*/
+.lb-flag-portugal {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid gold !important;
+}
+.lb-flag-portugal::after {
+	position:absolute;
+	content:"";
+    width: 9px;
+    height: 12px;
+	border-bottom: 4px solid green !important;
+	border-top: 4px solid green !important;
+	border-left: 4px solid green !important;
+}
+.lb-flag-portugal::before {
+	position:absolute;
+	content:"";
+    width: 9px;
+    height: 12px;
+	margin-left:9px;
+	border-bottom: 4px solid red !important;
+	border-top: 4px solid red !important;
+	border-right: 8px solid red !important;
+}
+
+/*flag-qatar littlebox icon*/
+.lb-flag-qatar {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: transparent !important;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-qatar::after {
+	position:absolute;
+	content:"";
+    width: 4px;
+    height: 12px;
+	border-bottom: 12px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-qatar::before {
+	position:absolute;
+	content:"";
+    width: 14px;
+    height: 12px;
+	margin-left:4px;
+	border-bottom: 12px solid rgba(153,64,65,1.00) !important;
+}
+
+/*flag-romania littlebox icon*/
+.lb-flag-romania {
+	display:inline-block;
+	vertical-align:middle;
+    width: 6px;
+    height: 12px;
+	margin-top:-2px;
+    border-bottom:12px solid gold !important;
+}
+.lb-flag-romania::after {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:-6px;
+	border-bottom: 12px solid blue !important;
+}
+.lb-flag-romania::before {
+	position:absolute;
+	content:"";
+    width: 6px;
+    height: 12px;
+	margin-left:6px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-russia littlebox icon*/
+.lb-flag-russia {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid blue !important;
+}
+.lb-flag-russia::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-russia::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid red !important;
+}
+
+/*flag-senegal littlebox icon*/
+.lb-flag-senegal {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 12px;
+	margin-top:-2px;
+    background-color: green !important;
+	border-top: 4px solid gold !important;
+	border-left: 3px solid gold !important;
+	border-bottom: 4px solid gold !important;
+	border-right: 3px solid gold !important;
+}
+.lb-flag-senegal::after {
+	position:absolute;
+	content:"";
+    width: 5px;
+    height: 12px;
+	margin-left:-8px;
+	margin-top:-4px;
+	border-bottom: 12px solid green !important;
+}
+.lb-flag-senegal::before {
+	position:absolute;
+	content:"";
+    width: 5px;
+	margin-top:-4px;
+    height: 12px;
+	margin-left:5px;
+	border-bottom: 12px solid red !important;
+}
+
+/*flag-sierraleone littlebox icon*/
+.lb-flag-sierraleone {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-sierraleone::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid green !important;
+}
+.lb-flag-sierraleone::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid blue !important;
+}
+
+/*flag-singapore littlebox icon*/
+.lb-flag-singapore {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 6px;
+	margin-left:-10px;
+	margin-top:-8px;
+    background-color: rgba(238,238,238,1.00) !important;
+	border-bottom: 2px solid red !important;
+	border-top: 2px solid red !important;
+	border-left: 2px solid red !important;
+	border-right: 2px solid red !important;
+}
+.lb-flag-singapore::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-left:6px;
+	margin-top:-2px;
+	border-bottom:6px solid red !important;
+}
+.lb-flag-singapore::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:4px;
+	margin-left:-2px;
+	border-bottom:6px solid rgba(238,238,238,1.00) !important;;
+}
+
+/*flag-nkorea littlebox icon*/
+.lb-flag-spain {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 8px;
+	margin-top:-2px;
+    border-bottom:1px solid gold;
+	border-top:1px solid gold;
+	border-left:3px solid gold;
+	border-right:9px solid gold;
+	background-color:red;
+}
+.lb-flag-spain::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:-3px;
+	margin-left:-3px;
+	border-bottom: 2px solid red !important;
+}
+.lb-flag-spain::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:7px;
+	margin-left:-3px;
+	border-top: 2px solid red !important;
+}
+
+/*flag-sweden littlebox icon*/
+.lb-flag-sweden {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid blue !important;
+}
+.lb-flag-sweden::after {
+	position:absolute;
+	content:"";
+    width: 2px;
+    height: 12px;
+	margin-left:4px;
+	border-bottom: 12px solid yellow !important;
+}
+.lb-flag-sweden::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 2px;
+	margin-top:5px;
+	border-bottom: 2px solid yellow !important;
+}
+
+/*flag-switzerland littlebox icon*/
+.lb-flag-switzerland {
+	display:inline-block;
+	vertical-align:middle;
+    width: 12px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid red !important;
+}
+.lb-flag-switzerland::after {
+	position:absolute;
+	content:"";
+    width: 2px;
+    height: 8px;
+	margin-left:5px;
+	margin-top:2px;
+	border-bottom: 8px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-switzerland::before {
+	position:absolute;
+	content:"";
+    width: 8px;
+    height: 2px;
+	margin-top:5px;
+	margin-left:2px;
+	border-bottom: 2px solid rgba(238,238,238,1.00) !important;
+}
+
+/*flag-taiwan littlebox icon*/
+.lb-flag-taiwan {
+	display:inline-block;
+	vertical-align:middle;
+    width: 8px;
+    height: 6px;
+	margin-left:-10px;
+	margin-top:-8px;
+    background-color: rgba(238,238,238,1.00) !important;
+	border-bottom: 2px solid blue !important;
+	border-top: 2px solid blue !important;
+	border-left: 2px solid blue !important;
+	border-right: 2px solid blue !important;
+}
+.lb-flag-taiwan::after {
+	position:absolute;
+	content:"";
+    width: 10px;
+    height: 6px;
+	margin-left:6px;
+	margin-top:-2px;
+	border-bottom:6px solid red !important;
+}
+.lb-flag-taiwan::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 6px;
+	margin-top:4px;
+	margin-left:-2px;
+	border-bottom:6px solid red !important;;
+}
+
+/*flag-tajikistan littlebox icon*/
+.lb-flag-tajikistan {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:1px solid rgba(238,238,238,1.00);
+	border-top:1px solid rgba(238,238,238,1.00);
+	border-left:8px solid rgba(238,238,238,1.00);
+	border-right:8px solid rgba(238,238,238,1.00);
+	background-color:gold;
+}
+.lb-flag-tajikistan::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-5px;
+	margin-left:-8px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-tajikistan::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:3px;
+	margin-left:-8px;
+	border-bottom: 4px solid green !important;
+}
+
+/*flag-vietnam littlebox icon*/
+.lb-flag-vietnam {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 12px;
+	margin-top:-3px;
+    background-color: transparent !important;
+	border-bottom: 12px solid yellow !important;
+}
+.lb-flag-vietnam::after {
+	position:absolute;
+	content:"";
+    width: 9px;
+    height: 12px;
+	border-bottom: 4px solid red !important;
+	border-top: 4px solid red !important;
+	border-left: 6px solid red !important;
+}
+.lb-flag-vietnam::before {
+	position:absolute;
+	content:"";
+    width: 9px;
+    height: 12px;
+	margin-left:9px;
+	border-bottom: 4px solid red !important;
+	border-top: 4px solid red !important;
+	border-right: 6px solid red !important;
+}
+
+/*flag-yemen littlebox icon*/
+.lb-flag-yemen {
+	display:inline-block;
+	vertical-align:middle;
+    width: 18px;
+    height: 4px;
+	margin-top:-2px;
+    border-bottom:4px solid rgba(238,238,238,1.00) !important;
+}
+.lb-flag-yemen::after {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:-4px;
+	border-bottom: 4px solid red !important;
+}
+.lb-flag-yemen::before {
+	position:absolute;
+	content:"";
+    width: 18px;
+    height: 4px;
+	margin-top:4px;
+	border-bottom: 4px solid black !important;
+}
