@@ -1,0 +1,38 @@
+{
+  "name": "littlebox",
+  "version": "0.1.0",
+  "description": "Super simple to implement, CSS-only icons.",
+  "main": "littlebox.min.css",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmaddux/littlebox.git"
+  },
+  "keywords": [
+    "css",
+    "icons",
+    "flags"
+  ],
+  "author": "Cabell Maddux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cmaddux/littlebox/issues"
+  },
+  "homepage": "https://github.com/cmaddux/littlebox",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-concat": "^2.5.0",
+    "gulp-minify-css": "^0.4.5"
+  },
+  "peerDependencies": {
+    "bootstrap": "^3.3.2"
+  }
+}
