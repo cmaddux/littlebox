@@ -37,7 +37,7 @@ Each littlebox icon is built using borders, so an icon's color (or even individu
 ```
 
 # Compatibility
-Compatibility is still being reveiwed. 
+Compatibility is still being reviewed. 
 
 # Contributing
 Suggestions, feedback and contributions to the icon library or compatibility would be greatly appreciated.
