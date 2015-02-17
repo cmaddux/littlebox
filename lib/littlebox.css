@@ -4497,36 +4497,35 @@
 
 /*flag-india littlebox icon*/
 .lb-flag-india {
-	display:inline-block;
-	vertical-align:middle;
+    display:inline-block;
+    vertical-align:middle;
     width: 18px;
     height: 4px;
-	margin-top:-2px;
-    border-bottom:1px solid rgba(238,238,238,1.00);
-	border-top:1px solid rgba(238,238,238,1.00);
-	border-left:8px solid rgba(238,238,238,1.00);
-	border-right:8px solid rgba(238,238,238,1.00);
-	background-color:green;
+    margin-top:-2px;
+    border-bottom:1px solid rgba(255,255,255,1.00);
+    border-top:1px solid rgba(255,255,255,1.00);
+    border-left:8px solid rgba(255,255,255,1.00);
+    border-right:8px solid rgba(255,255,255,1.00);
+    background-color: #000080;
 }
 .lb-flag-india::after {
-	position:absolute;
-	content:"";
+    position:absolute;
+    content:"";
     width: 18px;
     height: 4px;
-	margin-top:-5px;
-	margin-left:-8px;
-	border-bottom: 4px solid orange !important;
+    margin-top:-5px;
+    margin-left:-8px;
+    border-bottom: 4px solid orange !important;
 }
 .lb-flag-india::before {
-	position:absolute;
-	content:"";
+    position:absolute;
+    content:"";
     width: 18px;
     height: 4px;
-	margin-top:3px;
-	margin-left:-8px;
-	border-bottom: 4px solid green !important;
+    margin-top:3px;
+    margin-left:-8px;
+    border-bottom: 4px solid green !important;
 }
-
 /*flag-indonesia littlebox icon*/
 .lb-flag-indonesia {
 	display:inline-block;
