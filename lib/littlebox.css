@@ -2961,6 +2961,41 @@
 	margin-left:1px;
 }
 
+
+/* indian rupee icon*/
+.lb-rupee {
+display: inline-block;
+vertical-align: middle;
+height: 5px;
+width: 10px;
+border-bottom: 1px solid #000;
+border-top: 1px solid #000;
+margin-top: -7px;
+margin-left: 2px;
+}
+
+.lb-rupee::before {
+position: absolute;
+content: "";
+height: 7px;
+width: 8px;
+border-radius: 100%;
+border: 1px solid #000;
+border-left: 2px solid transparent;
+margin-left: 2px;
+margin-left: -1px;
+}
+.lb-rupee::after {
+    content: "";
+    position: absolute;
+    border-left: 1px solid #000;
+    width: 2px;
+    height: 7px;
+    margin-top: 6px;
+    transform: rotate(-30deg);
+    margin-left: 3px;
+}
+
 /*bitcoin littlebox icon*/
 .lb-bitcoin {
 	display:inline-block;
