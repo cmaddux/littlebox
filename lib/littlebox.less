@@ -1,18 +1,45 @@
 /*Mixins*/
+
+/*Side is one of:
+ - "top"
+ - "right"
+ - "bottom"
+ - "left"
+ */
+ 
+ /*
+.border-fill(Side, Number(in px or em))
+ - produces a border that acts as a fill for the element
+ - the color of the border fill is inherited by the parent
+ */
 .border-fill (@side, @border-width) {
 	border-@{side}: @border-width solid;
 	border-@{side}-color: inherit;
 	background-color: transparent !important;
 }
+
+/*
+.transparent-border (Side, Number(in px or em))
+ - produces a transparent border
+ */
 .transparent-border (@side, @border-width) {
 	border-@{side}: @border-width solid transparent !important;
 }
+
+/*
+.animation (String, Number(in sec))
+ - animates an element
+ */
 .animation (@animation-name, @animation-duration) {
 	-webkit-animation: @animation-name linear @animation-duration infinite alternate;
     -moz-animation: @animation-name linear @animation-duration infinite alternate;
     -o-animation: @animation-name linear @animation-duration infinite alternate;
     animation: @animation-name linear @animation-duration infinite alternate;
 }
+
+/*.triangle(Side, Number(in em or px), Side, Number(in em or px), Side, Number(in em or px))
+ - produces a triangle with base set by the first two arguments
+ */
 .triangle (@base, @base-width, @angle-one, @angle-one-width, @angle-two, @angle-two-width){
 	height:0;
 	width:0;
@@ -22,6 +49,9 @@
 	background:none !important
 }
 
+/*.rotate(Number(in deg))
+ - rotates an element
+ */
 .rotate (@deg) {
     -webkit-transform: rotate(@deg);
     -moz-transform: rotate(@deg);
@@ -30,12 +60,20 @@
     transform: rotate(@deg);
 }
 
+/*.align-rectangle(Number(in em or px), Number(in em or px), Number(in em or px), Number(in em or px), Number(in em or px), Number(in em or px))
+ - produces a rectangle where width and height are set by first and second arguments respectively
+ - Positioning is set via margins with final four arguments (default: 0px)
+ */
 .align-rectangle (@width, @height, @margin-top: 0px, @margin-right: 0px, @margin-bottom: 0px, @margin-left: 0px) {
 	width: @width;
 	height: @height;
 	margin: @margin-top @margin-right @margin-bottom @margin-left;
 }
 
+/*.align-circle(Number(in em or px), Number(in em or px), Number(in em or px), Number(in em or px), Number(in em or px), Number(in em or px))
+ - produces a circle or oval where width and height are set by first and second arguments respectively
+ - Positioning is set via margins with final four arguments (default: 0px)
+ */
 .align-circle (@height, @width, @margin-top:0px, @margin-right:0px, @margin-bottom:0px, @margin-left:0px) {
 	.align-rectangle(@height, @width, @margin-top, @margin-right, @margin-bottom, @margin-left);
 	border-radius:100%;

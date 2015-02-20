@@ -2,14 +2,17 @@
 var gulp = require('gulp'); 
 
 // include plug-ins
+var less = require('gulp-less');
 var concat = require('gulp-concat');
 var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 
 // CSS concat, auto-prefix and minify
-gulp.task('css', function() {
-  return gulp.src(['./lib/littlebox.css'])
-    .pipe(gulp.dest('./dist/')) //copy file to dist directory
+gulp.task('less', function() {
+  return gulp.src(['./lib/littlebox.less'])
+  	.pipe(gulp.dest('./dist/')) //copy less file to dist directory
+  	.pipe(less())
+    .pipe(gulp.dest('./dist/')) //copy css file to dist directory
     .pipe(concat('littlebox.min.css'))
     .pipe(autoprefix('last 2 versions'))
     .pipe(minifyCSS())
@@ -17,12 +20,12 @@ gulp.task('css', function() {
 });
 
 // watch task
-gulp.task('watch', ['css'], function() {
+gulp.task('watch', ['less'], function() {
   // watch for CSS changes
   return gulp.watch('./lib/**', function() {
-  	gulp.run('css');
+  	gulp.run('less');
   });
 });
 
 //default gulp task
-gulp.task('default', ['css']);
+gulp.task('default', ['less']);
