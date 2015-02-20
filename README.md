@@ -35,26 +35,45 @@ or
 Each littlebox icon is made up of three or fewer elements, but can be called with as a single element with class .lb-icon followed by the .lb-* class associated with the requested icon.
 
 # Customization
-Each littlebox icon is built using borders, so an icon's color (or even individual elements within an icon) can be styled in your CSS:
-
+Icon colors can be set a few ways:
+* Set the littlebox icon's color directly via `color` or `border-color` (the ::before and ::after elements will inherit the parent's color):
 ```
-.lb-*, .lb-*::before, .lb::after {
+.lb-* {
   border-color: /*YOUR COLOR HERE*/
 }
 ```
+or
+```
+.lb-* {
+  color: /*YOUR COLOR HERE*/
+}
+```
+* Put the littlebox icon inside a styled element and it will inherit the color of the parent:
+```
+<h2><div class="lb-icon lb-alert"></div>This is an alert</h2>
+```
+plus
+```
+h2 {
+  color: red;
+}
+```
+Will set the icon's color to red.
 
 # Compatibility
 Compatibility is still being reveiwed. 
 
 # Contributing
-Suggestions, feedback and contributions to the icon library or compatibility would be greatly appreciated.
+Contrubutions are welcome:
+* Fork the repository
+* Have [NPM](https://www.npmjs.com) and [Gulp](http://gulpjs.com) installed. Inside the littlebox directory run the command `npm install` to install the littlebox dev dependencies, followed by `npm run watch` to automatically compile and minify changes.
+* Find the littlebox.less file in the lib/ directory and make some awesome additions (They will be automatically compiled and minified into the dist/ directory).
+* Once you're done, just open up a pull request!
 
 # ToDo
 * Make icons scalable with EM units
-* Clean up jagged Firefox edges by setting transparent borders to 'inset'
 * Compatibility testing
 * Add to icon library
 * Improve animation compatibility
-* Make usable as button groups and input addons
 
 
