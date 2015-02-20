@@ -9,7 +9,7 @@ var minifyCSS = require('gulp-minify-css');
 
 // CSS concat, auto-prefix and minify
 gulp.task('less', function() {
-  return gulp.src(['./lib/littlebox.less'])
+  return gulp.src(['./src/littlebox.less'])
   	.pipe(gulp.dest('./dist/')) //copy less file to dist directory
   	.pipe(less())
     .pipe(gulp.dest('./dist/')) //copy css file to dist directory
@@ -22,7 +22,7 @@ gulp.task('less', function() {
 // watch task
 gulp.task('watch', ['less'], function() {
   // watch for CSS changes
-  return gulp.watch('./lib/**', function() {
+  return gulp.watch('./src/**', function() {
   	gulp.run('less');
   });
 });
