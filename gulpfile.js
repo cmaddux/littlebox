@@ -10,7 +10,6 @@ var minifyCSS = require('gulp-minify-css');
 // CSS concat, auto-prefix and minify
 gulp.task('less', function() {
   return gulp.src(['./src/littlebox.less'])
-  	.pipe(gulp.dest('./dist/')) //copy less file to dist directory
   	.pipe(less())
     .pipe(gulp.dest('./dist/')) //copy css file to dist directory
     .pipe(concat('littlebox.min.css'))
