@@ -9,7 +9,7 @@ Super simple to use, CSS-only icons
 
 # Using littlebox
 
-#####Step 1: Install littlebox through Bower or download littlebox and reference it in your project (along with Bootstrap, if not already initialized):
+##### Step 1: Install littlebox through Bower or download littlebox and reference it in your project (along with Bootstrap, if not already initialized):
 ```
 bower install littlebox
 ```
@@ -20,7 +20,7 @@ or
 <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
 ```
 
-#####Step 2: Add a littlebox icon to your project. The same structure is used for any littlebox:
+##### Step 2: Add a littlebox icon to your project. The same structure is used for any littlebox:
 ```
 <div class="lb-icon lb-*"></div>
 ```
